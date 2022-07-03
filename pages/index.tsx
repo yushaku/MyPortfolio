@@ -8,6 +8,7 @@ import Navbar from '../components/Navbar'
 import Social from '../components/Social'
 
 const Home: NextPage = () => {
+
   const isDarkMode = useRecoilValue(themeMode)
   const isShowNavbar = useRecoilValue(showNavbar)
   return (
@@ -23,9 +24,9 @@ const Home: NextPage = () => {
       </Head>
 
       <main className='text-textLight dark:bg-bgDark dark:text-[#f5f5f7]  relative '>
-        <Header />
-        <Intro/>
-        <Social/>
+        <Header data-aos='fade-down' />
+        <Intro />
+        <Social />
         {isShowNavbar && <Navbar />}
       </main>
     </div>

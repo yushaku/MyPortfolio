@@ -26,8 +26,13 @@
   .iconNavbar {
     @apply h-[4px] rounded-xl bg-white transition-all duration-300;
   }
-  .navActon {
-    @apply first:rotate-90;
+  .navbar {
+    @apply min-h-screen w-[80%]
+    justify-center flex items-center
+  dark:bg-bgNavDark dark:text-textDark text-xl;
+  }
+  .navItem {
+    @apply mx-2 hover:text-colorGreen text-center;
   }
   .icon {
     @apply mx-2;
@@ -35,7 +40,5 @@
   .button {
     @apply px-3 pt-2 pb-3 border-2 dark:border-colorGreen dark:text-colorGreen rounded-md hover:bg-colorGreen/30;
   }
-  .navItem {
-    @apply mx-2 hover:text-colorGreen text-center;
-  }
+
 }
