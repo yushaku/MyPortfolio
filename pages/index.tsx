@@ -21,7 +21,7 @@ const Home: NextPage = () => {
         <link rel='icon' href='/logo.ico' />
       </Head>
 
-      <main className='dark:bg-bgDark relative '>
+      <main className='dark:bg-bgDark dark:text-[#f5f5f7]  relative '>
         <Header />
         <Intro/>
         {isShowNavbar && <Navbar />}

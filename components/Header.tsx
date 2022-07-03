@@ -25,7 +25,7 @@ function Header() {
     }
   }, [])
   return (
-    <header className='dark:bg-bgDark dark:text-[#f5f5f7] sm:pl-[40px] md:pl-[75px]'>
+    <header>
       <div>
         <h1>
           <a

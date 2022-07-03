@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        bgDark: '#0f172b',
+        bgDark: '#0a192f',
         bgNavDark: '#0f2243',
         bgChildDark: '#1d293d',
         colorGreen: '#64ffda',
@@ -18,5 +18,8 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide'),
+    require('tailwind-scrollbar'),
+  ],
 }

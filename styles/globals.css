@@ -7,16 +7,17 @@
     @apply fixed 
     flex items-center justify-between
     top-0 left-0 z-50  
-    h-[8vh]
-    px-4 py-4
-    w-full
+    h-[10vh] w-full
+    px-4 py-4 sm:px-[40px] md:px-[75px]
+    
   }
   footer {
     @apply fixed 
     bottom-0;
   }
   body {
-    @apply text-[#1d1d1f] font-sans tracking-tight;
+    @apply text-[#1d1d1f] font-sans tracking-tight 
+    scroll-smooth !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-gray-500 overflow-hidden;
   }
 }
 
