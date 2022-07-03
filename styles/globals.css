@@ -6,9 +6,10 @@
   header {
     @apply fixed 
     flex items-center justify-between
+    dark:bg-bgDark
     top-0 left-0 z-50  
     h-[10vh] w-full
-    px-4 py-4 sm:px-[40px] md:px-[75px]
+    px-4 sm:px-[40px] md:px-[75px]
     
   }
   footer {

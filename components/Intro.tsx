@@ -15,7 +15,7 @@ function Intro() {
       <h2 className=' dark:text-textGray text-[35px] sm:text-[45px] md:text-[50px] lg:text-[75px] font-semibold  leading-[1] pb-6'>
         I build things for the web.
       </h2>
-      <p className='dark:text-textGray pr-10 text-[20px] max-w-[800px]'>
+      <p className='dark:text-textGray pr-[80px] text-[20px] max-w-[800px]'>
         I’m a software engineer specializing in building (and occasionally designing) exceptional digital
         experiences. Currently, I’m focused on building accessible, human-centered products at
         <a

@@ -5,6 +5,7 @@ import { showNavbar, themeMode } from '../atoms/storeAtom'
 import Header from '../components/Header'
 import Intro from '../components/Intro'
 import Navbar from '../components/Navbar'
+import Social from '../components/Social'
 
 const Home: NextPage = () => {
   const isDarkMode = useRecoilValue(themeMode)
@@ -18,12 +19,13 @@ const Home: NextPage = () => {
     >
       <Head>
         <title>Yushaku</title>
-        <link rel='icon' href='/logo.ico' />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main className='dark:bg-bgDark dark:text-[#f5f5f7]  relative '>
+      <main className='text-textLight dark:bg-bgDark dark:text-[#f5f5f7]  relative '>
         <Header />
         <Intro/>
+        <Social/>
         {isShowNavbar && <Navbar />}
       </main>
     </div>

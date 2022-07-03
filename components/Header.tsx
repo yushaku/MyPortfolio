@@ -30,7 +30,8 @@ function Header() {
         <h1>
           <a
             href='#'
-            className='text-[24px] font-semibold text-textLight dark:text-colorGreen flex items-center justify-center'
+            className='text-[24px] font-semibold  
+            dark:text-colorGreen flex items-center justify-center'
           >
             <Image src='/logo.png' width={35} height={35} className='cursor-pointer object-contain mt-2' />
             <span className=' pl-3'>Yushaku</span>
