@@ -2,13 +2,13 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useRecoilValue } from 'recoil'
 import { showNavbar, themeMode } from '../atoms/storeAtom'
+import About from '../components/About'
 import Header from '../components/Header'
 import Intro from '../components/Intro'
 import Navbar from '../components/Navbar'
 import Social from '../components/Social'
 
 const Home: NextPage = () => {
-
   const isDarkMode = useRecoilValue(themeMode)
   const isShowNavbar = useRecoilValue(showNavbar)
   return (
@@ -27,6 +27,7 @@ const Home: NextPage = () => {
         <Header data-aos='fade-down' />
         <Intro />
         <Social />
+        <About />
         {isShowNavbar && <Navbar />}
       </main>
     </div>

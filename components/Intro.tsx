@@ -54,7 +54,7 @@ function Intro() {
         }}
         initial='hidden'
         animate='visible'
-        className=' text-[40px] sm:text-[50px] md:text-[80px] lg:text-[90px] font-semibold leading-normal'
+        className=' text-[45px] pb-2 sm:text-[50px] md:text-[80px] lg:text-[90px] font-semibold leading-normal'
       >
         Yushaku.
       </motion.h1>
@@ -90,7 +90,7 @@ function Intro() {
         }}
         initial='hidden'
         animate='visible'
-        className='dark:text-textGray pr-[80px] text-[20px] max-w-[800px]'
+        className='dark:text-textGray pr-[80px] text-[20px] max-w-[800px] mb-5'
       >
         I’m a software engineer specializing in building (and occasionally designing) exceptional digital
         experiences. Currently, I’m focused on building accessible, human-centered products at
