@@ -42,7 +42,7 @@
   }
   .BgAnimationElement{
     @apply absolute animate-blob 
-    w-72 h-72 -z-1
+    w-72 h-72
     rounded-full 
     mix-blend-multiply filter blur-lg opacity-90
   }
