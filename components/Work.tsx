@@ -5,10 +5,6 @@ import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord'
 function Work() {
   const firstWork = workedList[0].title
   const [showWork, setShowWork] = useState(firstWork)
-
-  const handleShowWork = (title: string) => {
-    setShowWork(title)
-  }
   
   return (
     <div
@@ -30,7 +26,7 @@ function Work() {
                 <li
                   key={item.id}
                   className={`text-lg py-1 px-4 ${showWork === item.title && 'bg-[#153b5f]'}`}
-                  onClick={()=> handleShowWork(item.title)}
+                  onClick={()=> setShowWork(item.title)}
                 >
                   <span>{item.title}</span>
                 </li>
@@ -41,7 +37,6 @@ function Work() {
 
         <div className='description'>
           {workedList.map((item) => {
-            console.log(showWork != item.title)
             return (
               <div key={item.id} className={`text-lg py-2 px-4 ${showWork != item.title && 'hidden'}`}>
                 <h1 className='text-xl'>

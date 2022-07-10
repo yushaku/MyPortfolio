@@ -478,6 +478,11 @@ babel-plugin-macros@^2.6.1:
     cosmiconfig "^6.0.0"
     resolve "^1.12.0"
 
+bezier-easing@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/bezier-easing/-/bezier-easing-2.1.0.tgz#c04dfe8b926d6ecaca1813d69ff179b7c2025d86"
+  integrity sha512-gbIqZ/eslnUFC1tjEvtz0sgx+xTK20wDnYMIA27VA04R7w6xxXQPZDbibjA9DTWZRA2CXtwHykkVzlCaAJAZig==
+
 binary-extensions@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-2.2.0.tgz#75f502eeaf9ffde42fc98829645be4ea76bd9e2d"
@@ -901,6 +906,13 @@ object-hash@^3.0.0:
   resolved "https://registry.yarnpkg.com/object-hash/-/object-hash-3.0.0.tgz#73f97f753e7baffc0e2cc9d6e079079744ac82e9"
   integrity sha512-RSn9F68PjH9HqtltsSnqYC1XXoWe9Bju5+213R98cNGttag9q9yAOTzdbsqvIa7aNm5WffBZFpWYr2aWrklWAw==
 
+parallax-controller@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/parallax-controller/-/parallax-controller-1.5.0.tgz#324859f336566f114b8c08212b8454b6ad17de0f"
+  integrity sha512-X7FKD0bH27hJHdknH/UNEznmw6xjcWz/QA4M6RLlE/gUXfbePKhk+ld/20e58aAfjMqj+Q7RURryISFcDIVmtA==
+  dependencies:
+    bezier-easing "^2.1.0"
+
 parent-module@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/parent-module/-/parent-module-1.0.1.tgz#691d2709e78c79fae3a156622452d00762caaaa2"
@@ -1051,6 +1063,18 @@ react-is@^17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
+
+react-parallax-tilt@^1.7.44:
+  version "1.7.44"
+  resolved "https://registry.yarnpkg.com/react-parallax-tilt/-/react-parallax-tilt-1.7.44.tgz#d46fdb0668659f5dfa7d2d26d2c57fe3982228fa"
+  integrity sha512-7PM7Qb1j2/gQCok82aVPP8hBhUvZA0g0NbW774bepK+tU8lkoV0Rd60cLISiG8+ObECWFyBvuYJSo9CCrgFA2w==
+
+react-scroll-parallax@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/react-scroll-parallax/-/react-scroll-parallax-3.2.0.tgz#fad93571a274af796de3db344e358d1db67088b7"
+  integrity sha512-jZYFHbO+pE+IbNacHCpBKqw+WhGTA7t5WmXmQzC8i4DGdSYJ25d64R7ZD02K3CwMWdw5uKuc1LUZX/0OA/HCVA==
+  dependencies:
+    parallax-controller "^1.5.0"
 
 react-transition-group@^4.4.2:
   version "4.4.2"
@@ -1252,11 +1276,6 @@ util-deprecate@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==
-
-vanilla-tilt@^1.7.2:
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/vanilla-tilt/-/vanilla-tilt-1.7.2.tgz#59a5565d9f1f6d392a36969f223fb600dd101a81"
-  integrity sha512-arf2wY2Y65rP6Zxve9PnUUnRl9nQ1KenPNae6QRaVq/PEvaIto2bC4jYirNJ19U7nLkzI1H9O+nYtcQlX7BTsA==
 
 xtend@^4.0.2:
   version "4.0.2"

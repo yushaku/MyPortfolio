@@ -14,8 +14,9 @@
     "next": "latest",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "recoil": "^0.7.4",
-    "vanilla-tilt": "^1.7.2"
+    "react-parallax-tilt": "^1.7.44",
+    "react-scroll-parallax": "^3.2.0",
+    "recoil": "^0.7.4"
   },
   "devDependencies": {
     "@types/node": "17.0.35",

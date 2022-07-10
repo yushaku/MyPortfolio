@@ -4,10 +4,12 @@ import { useEffect, useState } from 'react'
 import { useRecoilValue } from 'recoil'
 import { showNavbar, themeMode } from '../atoms/storeAtom'
 import About from '../components/About'
+import Contact from '../components/Contact'
 import Header from '../components/Header'
 import Intro from '../components/Intro'
 import LoadingPage from '../components/LoadingPage'
 import Navbar from '../components/Navbar'
+import Project from '../components/Project'
 import Social from '../components/Social'
 import Work from '../components/Work'
 
@@ -19,7 +21,7 @@ const Home: NextPage = () => {
   useEffect(() => {
     const setLoading = setTimeout(() => {
       setIsLoading(false)
-    }, 500)
+    }, 800)
 
     return () => clearTimeout(setLoading)
   }, [])
@@ -44,6 +46,8 @@ const Home: NextPage = () => {
             <Social />
             <About />
             <Work />
+            <Project />
+            <Contact />
             {isShowNavbar && <Navbar />}
           </>
         )}
