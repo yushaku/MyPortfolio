@@ -19,7 +19,7 @@ function Project() {
         <p className='h-[2px] w-[250px] bg-gray-600 translate-y-1'></p>
       </div>
 
-      <div className='CONTENT flex gap-10 flex-col md:gap-[100px]'>
+      <div className='CONTENT flex gap-[80px] flex-col md:gap-[100px]'>
         {projectList.map((project) => {
           return (
             <Tilt
@@ -45,7 +45,7 @@ function Project() {
                     ? 'md:left-0 md:right-[200px] md:items-start justify-start'
                     : 'md:right-0 md:left-[200px] md:items-end justify-end '
                 }
-                bg-[#0a192f]/70 md:bg-[#0a192f]/0 px-10 md:px-0 
+                bg-[#0a192f]/70 md:bg-[#0a192f]/0 px-10  
                 flex justify-center flex-col `}
                 >
                   <h6 className='text-colorGreen'>Featured Project</h6>

@@ -48,6 +48,7 @@ const Home: NextPage = () => {
             <Work />
             <Project />
             <Contact />
+            <div className='text-colorGreen w-100vw text-center py-8'>Designed & Built by Yushaku</div>
             {isShowNavbar && <Navbar />}
           </>
         )}

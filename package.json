@@ -10,12 +10,15 @@
     "@emotion/styled": "^11.9.3",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.8.6",
+    "@splinetool/react-spline": "^2.2.1",
+    "@splinetool/runtime": "^0.9.75",
     "framer-motion": "^6.3.16",
     "next": "latest",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-parallax-tilt": "^1.7.44",
     "react-scroll-parallax": "^3.2.0",
+    "react-spline": "^1.2.1",
     "recoil": "^0.7.4"
   },
   "devDependencies": {

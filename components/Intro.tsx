@@ -19,7 +19,7 @@ function Intro() {
     <div
       className='h-[91vh] w-[100vw]
       pl-[25px] sm:pl-[50px] md:pl-[100px] lg:pl-[250px] mt-[8vh] 
-      -translate-y-[80px] md:-translate-y-[40px]
+      md:-translate-y-[40px]
       flex flex-col items-start justify-center'
     >
       <motion.h3
@@ -66,7 +66,7 @@ function Intro() {
             y: 0,
             transition: {
               duration: 0.7,
-              delay: 0.4,
+              delay: 0.5,
             },
           },
         }}
@@ -74,7 +74,7 @@ function Intro() {
         animate='visible'
         className=' dark:text-textGray text-[35px] sm:text-[45px] md:text-[50px] lg:text-[75px] font-semibold  leading-[1] pb-6'
       >
-        I build things for the web.
+        I'm a full-stack developer.
       </motion.h2>
       <motion.p
         variants={{
@@ -84,7 +84,7 @@ function Intro() {
             y: 0,
             transition: {
               duration: 0.7,
-              delay: 0.6,
+              delay: 0.7,
             },
           },
         }}
@@ -92,8 +92,8 @@ function Intro() {
         animate='visible'
         className='dark:text-textGray pr-[80px] text-[20px] max-w-[800px] mb-5'
       >
-        I’m a software engineer specializing in building (and occasionally designing) exceptional digital
-        experiences. Currently, I’m focused on building accessible, human-centered products at
+        I'm a software engineer specializing in building (and occasionally designing) exceptional digital
+        experiences. Currently, I'm focused on building accessible, human-centered products at
         <a
           href='https://zinza.com.vn/vi/'
           className='dark:text-colorGreen hover:decoration-solid hover:underline pl-2 transition-all duration-700'
@@ -109,7 +109,7 @@ function Intro() {
             y: 0,
             transition: {
               duration: 0.7,
-              delay: 0.7,
+              delay: 1,
             },
           },
         }}
