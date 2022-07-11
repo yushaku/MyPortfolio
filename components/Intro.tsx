@@ -1,6 +1,5 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-// import Spline from '@splinetool/react-spline'
 
 const variants = {
   hidden: {
@@ -21,7 +20,7 @@ function Intro() {
       className='h-[100vh] w-[100vw]
       pl-[25px] sm:pl-[50px] md:pl-[100px] lg:pl-[250px] mt-[8vh] 
       md:-translate-y-[40px]
-      flex flex-col items-center justify-center md:flex-row'
+      flex items-center md:flex-row'
     >
       <div className='max-w-50%'>
         <motion.h3
@@ -123,10 +122,24 @@ function Intro() {
           check out my resume!
         </motion.a>
       </div>
-      <div className=' hidden lg:block animate-blob duration-300'>
-        <img src="/21.png" alt="" />
-        {/* <Spline scene='https://prod.spline.design/DMK2wN12tqEY2-Wb/scene.splinecode' /> */}
-      </div>
+      <motion.div
+        variants={{
+          ...variants,
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 0.7,
+              delay: 1.2,
+            },
+          },
+        }}
+        initial='hidden'
+        animate='visible'
+        className=' hidden lg:block animate-blob duration-300'
+      >
+        <img src='/21.png' alt='' />
+      </motion.div>
     </div>
   )
 }

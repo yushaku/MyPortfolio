@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       animation: {
         blob: 'blob 5s infinite',
+        spinAround: 'spinAround 7s infinite linear ',
       },
       keyframes: {
         blob: {
@@ -19,6 +20,14 @@ module.exports = {
             transform: 'translate(0px, 0px) ',
           },
         },
+        spinAround: {
+          '0%': {
+            transform: 'rotate(0deg) ',
+          },
+          '100%': {
+            transform: 'rotate(360deg) ',
+          },
+        },
       },
       colors: {
         bgDark: '#0a192f',
@@ -30,9 +39,12 @@ module.exports = {
         textLight: '#1d1d1f',
       },
     },
+    backgroundImage: {
+      'team-shape': "url('./public/team-shape.png')",
+    },
   },
   plugins: [require('tailwind-scrollbar-hide'), require('tailwind-scrollbar')],
   variants: {
     scrollbar: ['rounded'],
-  },  
+  },
 }
