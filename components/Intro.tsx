@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const variants = {
   hidden: {
@@ -17,12 +18,12 @@ const variants = {
 function Intro() {
   return (
     <div
-      className='h-[100vh] w-[100vw]
+      className="h-[100vh] w-[100vw]
       pl-[25px] sm:pl-[50px] md:pl-[100px] lg:pl-[250px] mt-[8vh] 
       md:-translate-y-[40px]
-      flex items-center md:flex-row'
+      flex items-center md:flex-row"
     >
-      <div className='max-w-50%'>
+      <div className="max-w-50%">
         <motion.h3
           variants={{
             ...variants,
@@ -35,9 +36,9 @@ function Intro() {
               },
             },
           }}
-          initial='hidden'
-          animate='visible'
-          className='dark:text-colorGreen text-[17.6px]'
+          initial="hidden"
+          animate="visible"
+          className="dark:text-colorGreen text-[17.6px]"
         >
           Hi, my name is
         </motion.h3>
@@ -53,9 +54,9 @@ function Intro() {
               },
             },
           }}
-          initial='hidden'
-          animate='visible'
-          className=' text-[45px] pb-2 sm:text-[50px] md:text-[80px] lg:text-[90px] font-semibold leading-normal'
+          initial="hidden"
+          animate="visible"
+          className=" text-[45px] pb-2 sm:text-[50px] md:text-[80px] lg:text-[90px] font-semibold leading-normal"
         >
           Yushaku.
         </motion.h1>
@@ -71,11 +72,11 @@ function Intro() {
               },
             },
           }}
-          initial='hidden'
-          animate='visible'
-          className=' dark:text-textGray text-[35px] sm:text-[45px] md:text-[50px] lg:text-[55px] font-semibold  leading-[1] pb-6'
+          initial="hidden"
+          animate="visible"
+          className=" dark:text-textGray text-[35px] sm:text-[45px] md:text-[50px] lg:text-[55px] font-semibold  leading-[1] pb-6"
         >
-          I'm a full-stack developer.
+          I am a full-stack developer.
         </motion.h2>
         <motion.p
           variants={{
@@ -89,15 +90,15 @@ function Intro() {
               },
             },
           }}
-          initial='hidden'
-          animate='visible'
-          className='dark:text-textGray pr-[80px] text-[20px] max-w-[800px] mb-[5.35rem]'
+          initial="hidden"
+          animate="visible"
+          className="dark:text-textGray pr-[80px] text-[20px] max-w-[800px] mb-[5.35rem]"
         >
-          I'm a software engineer specializing in building (and occasionally designing) exceptional digital
-          experiences. Currently, I'm focused on building accessible, human-centered products at
+          I am a software engineer specializing in building (and occasionally designing) exceptional digital
+          experiences. Currently, I am focused on building accessible, human-centered products at
           <a
-            href='https://zinza.com.vn/vi/'
-            className='dark:text-colorGreen hover:decoration-solid hover:underline pl-2 transition-all duration-700'
+            href="https://zinza.com.vn/vi/"
+            className="pl-2 transition-all duration-700 dark:text-colorGreen hover:decoration-solid hover:underline"
           >
             Zinza technology.
           </a>
@@ -114,10 +115,10 @@ function Intro() {
               },
             },
           }}
-          initial='hidden'
-          animate='visible'
-          href='#'
-          className='button y-10 px-10 '
+          initial="hidden"
+          animate="visible"
+          href="#"
+          className="px-10 button y-10 "
         >
           check out my resume!
         </motion.a>
@@ -134,11 +135,11 @@ function Intro() {
             },
           },
         }}
-        initial='hidden'
-        animate='visible'
-        className=' hidden lg:block animate-blob duration-300'
+        initial="hidden"
+        animate="visible"
+        className="hidden duration-300 lg:block animate-blob"
       >
-        <img src='/21.png' alt='' />
+        <Image src="/21.png" alt="intro image 3d" />
       </motion.div>
     </div>
   )
