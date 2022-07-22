@@ -14,7 +14,7 @@ function Project() {
     >
       <div className="TITLE flex items-center gap-3 mb-[40px]">
         <h3 className="text-3xl">
-          <span className="text-colorGreen">03. </span>Some Projects I have Built
+          <span className="text-colorGreen">03. </span> Some Projects I have Built
         </h3>
         <p className="h-[2px] w-[250px] bg-gray-600 translate-y-1"></p>
       </div>
@@ -33,7 +33,7 @@ function Project() {
             >
               <div className={`relative flex ${project.id % 2 === 0 ? 'justify-end' : 'justify-start'}`}>
                 <div className="image md:w-[60%] lg:w-[70%] xl:w-[60%]">
-                  <Image className="" src={project.imageLink} alt={project.title} />
+                  <Image src={project.imageLink} alt={project.title} width={1500} height={800} />
                 </div>
 
                 <div
@@ -64,10 +64,10 @@ function Project() {
                     })}
                   </div>
                   <div className="pt-4 flex gap-4 text-[#ccd6f6]">
-                    <a href={project.githubLink}>
+                    <a href={project.githubLink} className="hover:text-colorGreen">
                       <GitHubIcon />
                     </a>
-                    <a href={project.linkPage}>
+                    <a href={project.linkPage} className="hover:text-colorGreen">
                       <SendIcon />
                     </a>
                   </div>

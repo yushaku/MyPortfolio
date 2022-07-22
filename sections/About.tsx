@@ -20,7 +20,7 @@ function About() {
           className="grid grid-cols-1 md:grid-cols-2 items-center
           gap-10 md:gap-20 text-[19px] text-textDark"
         >
-          <div className="left flex flex-col gap-3">
+          <div className="flex flex-col gap-3 left">
             <p>
               Hello! My name is Yushaku and I enjoy creating things that live on the internet. My interest in web
               development started back in 2020 when I decided to try editing custom Tumblr themes — turns out hacking
@@ -36,10 +36,10 @@ function About() {
               using Node and React.
             </p>
             <p>Here are a few technologies I have been working with recently:</p>
-            <ul className="flex items-center gap-8 flex-wrap">
+            <ul className="flex flex-wrap items-center gap-8">
               {programmingLanguage.map((Language) => (
                 <li key={Language.id} className="flex gap-1 items-center justify-center text-[19px]">
-                  <Image src={Language.iconLink} alt="icon" className=" w-[25px]" />
+                  <Image src={Language.iconLink} alt="icon" width={25} height={25} />
                   {Language.title}
                 </li>
               ))}
@@ -48,13 +48,8 @@ function About() {
 
           <div className="right relative z-10 h-[400px] cursor-pointer ">
             <div className="group absolute top-[6.5%] left-[8.9%]  flex items justify-center">
-              <Image src="/yushaku2.jpg" className="w-[350px] object-contain mt-2 z-10 rounded-full" />
+              <Image src="/yushaku2.jpg" className="z-10 object-contain mt-2 rounded-full" width={350} height={350} />
             </div>
-            <Image
-              src="/team-shape.png"
-              className="w-[400px] absolute top-0 z-2 xl:top-[18px] xl:left-[15px] 
-              animate-spinAround duration-500"
-            />
           </div>
         </div>
       </div>
