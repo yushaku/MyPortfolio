@@ -12,10 +12,9 @@
     "test-all": "yarn check-format && yarn check-lint && yarn check-types && yarn build"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.8.6",
-    "axios": "^0.27.2",
-    "emailjs": "^4.0.0",
     "framer-motion": "^6.3.16",
     "next": "latest",
     "react": "18.1.0",

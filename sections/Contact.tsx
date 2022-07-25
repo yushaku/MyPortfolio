@@ -1,16 +1,32 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Image from 'next/image'
 import Button from '../components/Button'
 import { motion } from 'framer-motion'
+import emailjs from '@emailjs/browser'
 
 function Contact() {
+  
+  const form = useRef<HTMLFormElement>(null)
+
+  const sendEmail = (e: any) => {
+    e.preventDefault()
+
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'N00nfd158h20_rLad').then(
+      (result) => {
+        alert(result.text)
+      },
+      (error) => {
+        alert(error.text)
+      },
+    )
+  }
   return (
     <motion.div
       animate={{
         x: 100,
       }}
       className="w-[100vw] h-[90vh]
-      px-[25px] pt-[15vh] sm:px-[50px] md:px-[100px] lg:px-[250px]
+      px-[25px] pt-[15vh] sm:px-[50px] md:px-[100px] lg:px-[150px]
       relative"
     >
       <div className="">
@@ -25,6 +41,14 @@ function Contact() {
         </p>
         <Button title="Say hello" />
       </div>
+      
+      <div className="absolute top-[50%] left-[50%] z-20 bg-[#0f2243] w-10 h-10">
+        <form ref={form} onSubmit={sendEmail}>
+          <input type="email" name="" id="" />
+          <input type="text" name="" id="" />
+        </form>
+      </div>
+      
       <div
         className="animate-blob duration-300 
         md:absolute md:right-[20px] md:bottom-[0px] 
