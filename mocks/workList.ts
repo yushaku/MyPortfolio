@@ -67,7 +67,8 @@ export const programmingLanguage = [
   {
     id: 5,
     title: 'ExpressJs',
-    iconLink: 'https://w7.pngwing.com/pngs/1/116/png-transparent-socket-io-node-js-express-js-javascript-others-angle-text-trademark.png',
+    iconLink:
+      'https://w7.pngwing.com/pngs/1/116/png-transparent-socket-io-node-js-express-js-javascript-others-angle-text-trademark.png',
   },
   {
     id: 5,

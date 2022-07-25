@@ -9,8 +9,7 @@
     dark:bg-bgDark
     top-0 left-0 z-50  
     h-[10vh] w-full
-    px-4 sm:px-[40px] md:px-[75px]
-    
+    px-4 sm:px-[40px] md:px-[75px];
   }
   footer {
     @apply fixed 
@@ -40,11 +39,10 @@
   .button {
     @apply px-3 pt-2 pb-3 border-2 dark:border-colorGreen dark:text-colorGreen rounded-md hover:bg-colorGreen/30;
   }
-  .BgAnimationElement{
+  .BgAnimationElement {
     @apply absolute animate-blob 
     w-72 h-72
     rounded-full 
-    mix-blend-multiply filter blur-lg opacity-90
+    mix-blend-multiply filter blur-lg opacity-90;
   }
-
 }
