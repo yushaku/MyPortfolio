@@ -42,11 +42,14 @@ function Work() {
                 <h1 className="text-xl">
                   {item.position} <span className="font-semibold dark:text-colorGreen">@{item.title}</span>
                 </h1>
-                <p className="text-sm text-textGray">{item.date}</p>
+                <p className="text-sm text-textGrayDark">{item.date}</p>
                 <ul className="mt-3">
                   {item.describe.map((descItem, index) => {
                     return (
-                      <li key={index} className="flex items-center justify-start gap-3 pb-2 leading-6 text-textGray">
+                      <li
+                        key={index}
+                        className="flex items-center justify-start gap-3 pb-2 leading-6 text-textGrayDark"
+                      >
                         <FiberManualRecordIcon className=" dark:bg-colorGreen rounded-full !text-[10px]" />
                         <span>{descItem}</span>
                       </li>

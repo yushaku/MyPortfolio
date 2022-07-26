@@ -3,9 +3,10 @@ import React from 'react'
 
 type props = {
   title: string
+  setOnClick: any
 }
 
-function Button({ title }: props) {
+function Button({ title, setOnClick }: props) {
   return (
     <motion.button
       className={`button`}
@@ -14,6 +15,7 @@ function Button({ title }: props) {
         transition: { duration: 0.35 },
       }}
       whileTap={{ scale: 0.9 }}
+      onClick={setOnClick}
     >
       {title}
     </motion.button>

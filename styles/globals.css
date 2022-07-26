@@ -6,14 +6,14 @@
   header {
     @apply fixed 
     flex items-center justify-between
+    bg-[#f6f6f6]
     dark:bg-bgDark
     top-0 left-0 z-50  
     h-[10vh] w-full
     px-4 sm:px-[40px] md:px-[75px];
   }
   footer {
-    @apply fixed 
-    bottom-0;
+    @apply fixed bottom-0;
   }
   body {
     @apply text-[#1d1d1f] font-sans tracking-tight 
@@ -31,18 +31,21 @@
   dark:bg-bgNavDark dark:text-textDark text-xl;
   }
   .navItem {
-    @apply mx-2 hover:text-colorGreen text-center;
+    @apply mx-2 text-center hover:text-colorGreen;
   }
   .icon {
     @apply mx-2;
   }
   .button {
-    @apply px-3 pt-2 pb-3 border-2 dark:border-colorGreen dark:text-colorGreen rounded-md hover:bg-colorGreen/30;
+    @apply px-3 pt-2 pb-3 border-2 rounded-md border-colorPrimary text-colorPrimary hover:bg-colorPrimary/20 dark:border-colorGreen dark:text-colorGreen dark:hover:bg-colorGreen/30;
+  }
+  .input{
+    @apply w-[500px] h-[30px] px-8 py-5 my-4 bg-slate-100 rounded-md text-[#333] placeholder:text-[#666] focus:border-none
+  }
+  .textArea {
+    @apply w-[500px] h-[200px] px-8 pt-7 my-4 bg-slate-100 rounded-md text-[#333] placeholder:text-[#666] focus:border-none
   }
   .BgAnimationElement {
-    @apply absolute animate-blob 
-    w-72 h-72
-    rounded-full 
-    mix-blend-multiply filter blur-lg opacity-90;
+    @apply absolute rounded-full animate-blob w-72 h-72 mix-blend-multiply filter blur-lg opacity-90;
   }
 }

@@ -9,3 +9,8 @@ export const showNavbar = atom({
   key: 'navbar',
   default: false,
 })
+
+export const showFormContact = atom({
+  key: 'formContact',
+  default: false,
+})

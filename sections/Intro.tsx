@@ -17,7 +17,7 @@ function Intro() {
           variants={delayShowOf}
           initial="hidden"
           animate="visible"
-          className="dark:text-colorGreen text-[17.6px]"
+          className="dark:text-colorGreen text-colorPrimary text-[17.6px]"
         >
           Hi, my name is
         </motion.h3>
@@ -39,7 +39,7 @@ function Intro() {
           variants={delayShowOf}
           initial="hidden"
           animate="visible"
-          className=" dark:text-textGray text-[35px] sm:text-[45px] md:text-[50px] lg:text-[55px] font-semibold  leading-[1] pb-6"
+          className="text-textGrayLight dark:text-textGrayDark text-[35px] sm:text-[45px] md:text-[50px] lg:text-[55px] font-semibold  leading-[1] pb-6"
         >
           I am a full-stack developer.
         </motion.h2>
@@ -48,13 +48,13 @@ function Intro() {
           variants={delayShowOf}
           initial="hidden"
           animate="visible"
-          className="dark:text-textGray pr-[80px] text-[20px] max-w-[800px] mb-[5.35rem]"
+          className="text-textGrayLight dark:text-textGrayDark pr-[80px] text-[20px] max-w-[800px] mb-[5.35rem]"
         >
           I am a software engineer specializing in building (and occasionally designing) exceptional digital
           experiences. Currently, I am focused on building accessible, human-centered products at
           <a
             href="https://zinza.com.vn/vi/"
-            className="pl-2 transition-all duration-700 dark:text-colorGreen hover:decoration-solid hover:underline"
+            className="pl-2 transition-all duration-700 text-colorPrimary dark:text-colorGreenhover:decoration-solid hover:underline"
           >
             Zinza technology.
           </a>

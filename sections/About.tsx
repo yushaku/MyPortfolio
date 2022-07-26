@@ -17,7 +17,7 @@ function About() {
         </div>
 
         <div
-          className="grid grid-cols-1 md:grid-cols-2 items-center
+          className="grid grid-cols-1 xl:grid-cols-2 items-center
           gap-10 md:gap-20 text-[19px] text-textDark"
         >
           <div className="flex flex-col gap-3 left">
@@ -46,9 +46,15 @@ function About() {
             </ul>
           </div>
 
-          <div className="right relative z-10 h-[400px] cursor-pointer ">
-            <div className="group absolute top-[6.5%] left-[8.9%]  flex items justify-center">
-              <Image src="/yushaku2.jpg" className="z-10 object-contain mt-2 rounded-full" width={350} height={350} />
+          <div className="right h-[400px] cursor-pointer ">
+            <div className="flex justify-center group items">
+              <Image
+                src="/yushaku2.jpg"
+                alt="le van son"
+                className="mt-2 rounded-full bject-contain "
+                width={350}
+                height={350}
+              />
             </div>
           </div>
         </div>

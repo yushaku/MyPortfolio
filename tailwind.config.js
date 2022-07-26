@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}', './sections/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
     extend: {
@@ -35,8 +35,12 @@ module.exports = {
         bgChildDark: '#1d293d',
         colorGreen: '#64ffda',
         textDark: '#ccd6f6',
-        textGray: '#8992b0',
+        textGrayDark: '#8992b0',
+
+        bgLight: '#fafafa',
         textLight: '#1d1d1f',
+        colorPrimary: '#009adc',
+        textGrayLight: '#5e5e5e',
       },
     },
     backgroundImage: {
