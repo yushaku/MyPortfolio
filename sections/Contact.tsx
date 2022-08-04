@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 import Button from '../components/Button'
 import { motion } from 'framer-motion'
 import { useRecoilState } from 'recoil'
@@ -19,13 +18,13 @@ function Contact() {
       
       relative"
     >
-      <h3 className="text-3xl ">
-        <span className="text-colorGreen">04.</span> Interested in working with me?
-      </h3>
       <div className="flex flex-col items-center justify-center h-[70%]">
-        <h1 className="text-[60px] font-semibold text-[#ccd6f6]">Get In Touch</h1>
+        <h3 className="text-3xl pb-9">
+          <span className="text-colorGreen">04.</span> Interested in working with me?
+        </h3>
+        <h1 className="text-[60px] font-semibold text-[#ccd6f6] pb-9">Get In Touch</h1>
         <p
-          className=" text-textGrayDark my-4 
+          className=" text-textGrayDark my-4 pb-9
           max-w-[600px] md:max-w-[360px] lg:max-w-[400px] xl:max-w-[600px]"
         >
           Although i am not currently looking for any new opportunities, my inbox is always open. Whether you have a
@@ -34,14 +33,14 @@ function Contact() {
         <Button title="Say hello" setOnClick={handleOpenFormConnect} />
       </div>
 
-      <div
+      {/* <div
         className="animate-blob duration-300 
         md:absolute md:right-[20px] md:bottom-[0px] 
         lg:right-[50px] lg:bottom-[50px]
-        xl:right-[420px] "
+        xl:right-[320px] "
       >
         <Image src="/3.png" alt="connect to me" width={500} height={500} />
-      </div>
+      </div> */}
     </motion.div>
   )
 }

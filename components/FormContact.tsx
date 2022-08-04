@@ -3,6 +3,9 @@ import emailjs from '@emailjs/browser'
 import { envEmailjs } from '../constants/emailjs'
 import { useRecoilState } from 'recoil'
 import { showFormContact } from '../atoms/storeAtom'
+import CloseIcon from '@mui/icons-material/Close'
+import { motion } from 'framer-motion'
+import { showOut } from '../mocks/framerMotionEffect'
 
 type formEmail = {
   name: string
@@ -44,14 +47,20 @@ function FormContact() {
   }
 
   return (
-    <div className="fixed top-[10%] left-0 z-200 bg-[#0f2243c6] w-[100vw] h-[90vh] flex items-center justify-center">
-      <i
-        className="absolute top-[5%] right-[5%] text-2xl cursor-pointer"
-        onClick={() => setIsShowFormcontact(!isShowFormContact)}
+    <div className="fixed top-0 left-0 flex items-center justify-center rounded-md z-200 w-[100vw] h-[100vh]">
+      <motion.form
+        onSubmit={sendEmail}
+        initial="hidden"
+        animate="visible"
+        variants={showOut}
+        className="relative flex flex-col items-center justify-center bg-[#0f2243] w-[650px] h-[90vh]"
       >
-        X
-      </i>
-      <form onSubmit={sendEmail} className="flex flex-col items-center justify-center">
+        <CloseIcon
+          className="absolute top-[60px] right-[12px] cursor-pointer"
+          fontSize="large"
+          onClick={() => setIsShowFormcontact(!isShowFormContact)}
+        />
+        <h1 className="text-5xl font-semibold pb-9 text-colorGreen">Get in touch</h1>
         <input
           type="email"
           name="email"
@@ -92,8 +101,8 @@ function FormContact() {
           }}
           value={formEmail.message}
         />
-        <input type="submit" className="button px-[36px] " value="send" />
-      </form>
+        <input type="submit" className="button px-[36px] mt-10" value="send" />
+      </motion.form>
     </div>
   )
 }

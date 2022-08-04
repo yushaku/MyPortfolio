@@ -77,7 +77,7 @@ function Intro() {
         animate="visible"
         className="hidden duration-300 lg:block animate-blob"
       >
-        <Image src="/21.png" alt="intro image 3d" width={500} height={500} />
+        <Image src="/3.png" alt="intro image 3d" width={500} height={500} />
       </motion.div>
     </div>
   )
