@@ -6,8 +6,10 @@ import { showFormContact } from '../atoms/storeAtom'
 import CloseIcon from '@mui/icons-material/Close'
 import { motion } from 'framer-motion'
 import { showOut } from '../mocks/framerMotionEffect'
+import { SubmitHandler, useForm } from 'react-hook-form'
+import { Alert } from '@mui/material'
 
-type formEmail = {
+type FormEmail = {
   name: string
   email: string
   title: string
@@ -16,32 +18,34 @@ type formEmail = {
 
 function FormContact() {
   const [isShowFormContact, setIsShowFormcontact] = useRecoilState(showFormContact)
-
-  const [formEmail, setFormEmail] = useState<formEmail>({
-    email: '',
-    name: '',
-    title: '',
+  const [showAlert, setShowAlert] = useState({
+    isShow: false,
     message: '',
+    type: '',
   })
 
-  const handleOnChange = (e: React.FormEvent<HTMLInputElement>) => {
-    const idInput = e.currentTarget.id
-    setFormEmail({
-      ...formEmail,
-      [idInput]: e.currentTarget.value,
-    })
-  }
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormEmail>()
 
-  const sendEmail = (e: React.FormEvent) => {
-    e.preventDefault()
-    emailjs.send(envEmailjs.YOUR_SERVICE_ID, envEmailjs.YOUR_TEMPLATE_ID, formEmail, envEmailjs.PUBLIC_API_KEY).then(
+  const sendEmail: SubmitHandler<FormEmail> = (formValue: FormEmail) => {
+    // setIsShowFormcontact(!isShowFormContact)
+    emailjs.send(envEmailjs.YOUR_SERVICE_ID, envEmailjs.YOUR_TEMPLATE_ID, formValue, envEmailjs.PUBLIC_API_KEY).then(
       (result) => {
-        alert(result.text)
-        setIsShowFormcontact(!isShowFormContact)
+        setShowAlert({
+          isShow: true,
+          message: `${result.text}, send email successfully, i will reply you soon!`,
+          type: 'success',
+        })
       },
       (error) => {
-        alert(error.text)
-        setIsShowFormcontact(!isShowFormContact)
+        setShowAlert({
+          isShow: true,
+          message: error.text,
+          type: 'error',
+        })
       },
     )
   }
@@ -49,7 +53,7 @@ function FormContact() {
   return (
     <div className="fixed top-0 left-0 flex items-center justify-center rounded-md z-200 w-[100vw] h-[100vh]">
       <motion.form
-        onSubmit={sendEmail}
+        onSubmit={handleSubmit(sendEmail)}
         initial="hidden"
         animate="visible"
         variants={showOut}
@@ -61,48 +65,67 @@ function FormContact() {
           onClick={() => setIsShowFormcontact(!isShowFormContact)}
         />
         <h1 className="text-5xl font-semibold pb-9 text-colorGreen">Get in touch</h1>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          className="input"
-          placeholder="your email"
-          onChange={handleOnChange}
-          value={formEmail.email}
-        />
-        <input
-          type="text"
-          name="name"
-          id="name"
-          className="input"
-          placeholder="your name"
-          onChange={handleOnChange}
-          value={formEmail.name}
-        />
-        <input
-          type="text"
-          name="title"
-          id="title"
-          className="input"
-          placeholder="your job title"
-          onChange={handleOnChange}
-          value={formEmail.title}
-        />
-        <textarea
-          name="message"
-          id="message"
-          className="textArea"
-          placeholder="your message"
-          onChange={(e: React.FormEvent<HTMLTextAreaElement>) => {
-            setFormEmail({
-              ...formEmail,
-              message: e.currentTarget.value,
-            })
-          }}
-          value={formEmail.message}
-        />
+
+        <label htmlFor="email">
+          <input
+            type="email"
+            {...register('email', { required: 'Please input your email' })}
+            id="email"
+            className="input"
+            placeholder="your email"
+          />
+          <p className="text-red-400">{errors.email?.message}</p>
+        </label>
+
+        <label htmlFor="name">
+          <input
+            type="text"
+            {...register('name', { required: 'May i know your name?' })}
+            id="name"
+            className="input"
+            placeholder="your name"
+          />
+          <p className="text-red-400">{errors.name?.message}</p>
+        </label>
+
+        <label htmlFor="title">
+          <input
+            type="text"
+            {...register('title', { required: 'What is your project?' })}
+            id="title"
+            className="input"
+            placeholder="your job title"
+          />
+          <p className="text-red-400">{errors.title?.message}</p>
+        </label>
+
+        <label htmlFor="message">
+          <textarea
+            {...register('message', { required: 'Show me some description about your project', min: 30 })}
+            id="message"
+            className="textArea"
+            placeholder="your message"
+          />
+          <p className="text-red-400">{errors.message?.message}</p>
+        </label>
+
         <input type="submit" className="button px-[36px] mt-10" value="send" />
       </motion.form>
+
+      {showAlert.isShow && (
+        <Alert
+          onClose={() => {
+            setShowAlert({
+              ...showAlert,
+              isShow: false,
+            })
+          }}
+          severity="success"
+          className="fixed bottom-10 right-5"
+        >
+          <strong>{showAlert.message}</strong>
+        </Alert>
+      )}
     </div>
   )
 }
