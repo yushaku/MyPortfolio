@@ -8,6 +8,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { listVariants, delayShowOf, showOut } from '../mocks/framerMotionEffect'
 import { navbarList } from '../mocks/navbarList'
+import Link from 'next/link'
 
 function Header() {
   const [isDarkMode, setIsDarkMode] = useRecoilState(themeMode)
@@ -42,10 +43,19 @@ function Header() {
           variants={listVariants}
         >
           {navbarList.map((listItem, i) => (
-            <motion.li key={listItem.id} custom={i} initial="hidden" animate="visible" variants={delayShowOf}>
-              <span className="dark:text-colorGreen text-colorPrimary">0{listItem.id}.</span>
-              <a className="dark:hover:text-colorGreen hover:text-colorPrimary" href="#Contact">
-                {listItem.title}
+            <motion.li
+              key={listItem.id}
+              custom={i}
+              initial="hidden"
+              animate="visible"
+              variants={delayShowOf}
+              className="cursor-pointer"
+            >
+              <a href={`#${listItem.link}`}>
+                <>
+                  <span className="dark:text-colorGreen text-colorPrimary">0{listItem.id}.</span>
+                  <span className="dark:hover:text-colorGreen hover:text-colorPrimary">{listItem.title}</span>
+                </>
               </a>
             </motion.li>
           ))}

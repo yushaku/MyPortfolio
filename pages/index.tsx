@@ -31,7 +31,7 @@ const Home: NextPage = () => {
   return (
     <div
       className={`${isDarkMode && 'dark'}
-      relative min-h-screen
+      relative min-h-screen scroll-smooth
       flex flex-col items-center justify-center `}
     >
       <Head>

@@ -5,6 +5,7 @@ import Image from 'next/image'
 function About() {
   return (
     <div
+      id="About_Section"
       className="pb-[56px] w-[100vw] 
       px-[25px] sm:px-[50px] md:px-[100px] lg:px-[300px]"
     >

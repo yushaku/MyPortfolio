@@ -2,21 +2,22 @@ export const navbarList = [
   {
     id: 1,
     title: 'About',
-    link: '',
+    link: 'About_Section',
   },
   {
     id: 2,
-    title: 'Experience',
-    link: '',
+    title: 'Work',
+    link: 'Work_Section',
   },
   {
     id: 3,
-    title: 'Work',
-    link: '',
+    title: 'Experience',
+    link: 'Experience_Section',
   },
+
   {
     id: 4,
     title: 'Contact',
-    link: '',
+    link: 'Contact_Section',
   },
 ]

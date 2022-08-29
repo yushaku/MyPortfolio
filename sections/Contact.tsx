@@ -5,14 +5,15 @@ import { useRecoilState } from 'recoil'
 import { showFormContact } from '../atoms/storeAtom'
 
 function Contact() {
-  const [isShowFormContact, setIsShowFormcontact] = useRecoilState(showFormContact)
+  const [isShowFormContact, setIsShowFormContact] = useRecoilState(showFormContact)
 
   const handleOpenFormConnect = () => {
-    setIsShowFormcontact(!isShowFormContact)
+    setIsShowFormContact(!isShowFormContact)
   }
 
   return (
     <motion.div
+      id="Contact_Section"
       className="ContactSection w-[100vw] h-[100%] md:h-[70vh]
       px-[25px] sm:px-[50px] md:px-[100px] lg:px-[250px] mt-[20vh] 
       

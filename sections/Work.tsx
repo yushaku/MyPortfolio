@@ -8,6 +8,7 @@ function Work() {
 
   return (
     <div
+      id="Work_Section"
       className="w-[100vw] py-[10vh]
       px-[25px] sm:px-[50px] md:px-[100px] lg:px-[250px]"
     >

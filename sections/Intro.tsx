@@ -6,6 +6,7 @@ import { delayShowOf } from '../mocks/framerMotionEffect'
 function Intro() {
   return (
     <div
+      id="Intro_Section"
       className="h-[100vh] w-[100vw]
       pl-[25px] sm:pl-[50px] md:pl-[100px] lg:pl-[250px] mt-[8vh] 
       md:-translate-y-[40px]
