@@ -32,7 +32,12 @@ function Social() {
             </a>
           </motion.li>
           <motion.li initial="hidden" animate="visible" variants={socialVariant}>
-            <a target="_blank" className="dark:hover:text-colorGreen hover:text-colorPrimary" href="">
+            <a
+              target="_blank"
+              className="dark:hover:text-colorGreen hover:text-colorPrimary"
+              href="https://yushaku.vercel.app/"
+              rel="noreferrer"
+            >
               <BookIcon className="text-3xl transition-all duration-700 hover:-translate-y-2" />
             </a>
           </motion.li>

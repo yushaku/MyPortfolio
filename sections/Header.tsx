@@ -8,7 +8,6 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { listVariants, delayShowOf, showOut } from '../mocks/framerMotionEffect'
 import { navbarList } from '../mocks/navbarList'
-import Link from 'next/link'
 
 function Header() {
   const [isDarkMode, setIsDarkMode] = useRecoilState(themeMode)
@@ -31,6 +30,7 @@ function Header() {
               width={35}
               height={35}
               className="object-contain mt-2 cursor-pointer"
+              loading="lazy"
             />
             <span className="pl-3 ">Yushaku</span>
           </motion.a>

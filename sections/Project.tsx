@@ -38,7 +38,7 @@ function Project() {
                 } lg:w-[80%] mx-auto py-4`}
               >
                 <div className="image md:w-[60%] lg:w-[70%] xl:w-[60%]">
-                  <Image src={project.imageLink} alt={project.title} width={1500} height={800} />
+                  <Image src={project.imageLink} alt={project.title} width={1500} height={800} loading="lazy" />
                 </div>
 
                 <div

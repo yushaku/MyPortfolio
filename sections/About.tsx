@@ -40,7 +40,7 @@ function About() {
             <ul className="flex flex-wrap items-center gap-8">
               {programmingLanguage.map((Language) => (
                 <li key={Language.id} className="flex gap-1 items-center justify-center text-[19px]">
-                  <Image src={Language.iconLink} alt="icon" width={25} height={25} />
+                  <Image src={Language.iconLink} alt="icon" width={25} height={25} loading="lazy" />
                   {Language.title}
                 </li>
               ))}
@@ -55,6 +55,7 @@ function About() {
                 className="mt-2 rounded-full bject-contain "
                 width={350}
                 height={350}
+                loading="lazy"
               />
             </div>
           </div>
