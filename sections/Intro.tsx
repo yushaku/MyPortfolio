@@ -3,6 +3,7 @@ import React from 'react'
 
 import useScrollAnimation from '@/hooks/useScrollAnimation'
 import { delayShowOf } from '@/mocks/framerMotionEffect'
+import ModelEarth from './model3D'
 
 function Intro() {
   const { ref, control, motion } = useScrollAnimation()
@@ -79,15 +80,16 @@ function Intro() {
           check out my resume!
         </motion.a>
       </div>
+
       <motion.div
         ref={ref}
         custom={7}
         variants={delayShowOf}
         initial="hidden"
         animate={control}
-        className="hidden duration-300 lg:block animate-blob"
+        className="hidden lg:block"
       >
-        <Image src="/3.png" alt="intro image 3d" width={500} height={500} loading="lazy" />
+        <ModelEarth />
       </motion.div>
     </div>
   )
