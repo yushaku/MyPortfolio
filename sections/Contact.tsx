@@ -1,23 +1,26 @@
 import React from 'react'
-import Button from '../components/Button'
-import { motion } from 'framer-motion'
+import Button from '@/components/Button'
 import { useRecoilState } from 'recoil'
-import { showFormContact } from '../atoms/storeAtom'
+import { showFormContact } from '@/atoms/storeAtom'
+import useScrollAnimation from '@/hooks/useScrollAnimation'
+import { scrollVariant } from '@/mocks/framerMotionEffect'
 
 function Contact() {
   const [isShowFormContact, setIsShowFormContact] = useRecoilState(showFormContact)
-
   const handleOpenFormConnect = () => {
     setIsShowFormContact(!isShowFormContact)
   }
 
+  const { ref, control, motion } = useScrollAnimation()
+
   return (
     <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={control}
+      variants={scrollVariant}
       id="Contact_Section"
-      className="ContactSection w-[100vw] h-[100%] md:h-[70vh]
-      px-[25px] sm:px-[50px] md:px-[100px] lg:px-[250px] mt-[20vh] 
-      
-      relative"
+      className="ContactSection w-[100vw] h-[100%] md:h-[70vh] px-[25px] sm:px-[50px] md:px-[100px] lg:px-[250px] mt-[20vh] relative"
     >
       <div className="flex flex-col items-center justify-center h-[70%]">
         <h3 className="text-3xl pb-9">
@@ -33,15 +36,6 @@ function Contact() {
         </p>
         <Button title="Say hello" setOnClick={handleOpenFormConnect} />
       </div>
-
-      {/* <div
-        className="animate-blob duration-300 
-        md:absolute md:right-[20px] md:bottom-[0px] 
-        lg:right-[50px] lg:bottom-[50px]
-        xl:right-[320px] "
-      >
-        <Image src="/3.png" alt="connect to me" width={500} height={500} />
-      </div> */}
     </motion.div>
   )
 }

@@ -30,3 +30,13 @@ export const projectList = [
     linkPage: '',
   },
 ]
+
+export type ProjectEntity = {
+  id: number
+  title: string
+  imageLink: string
+  description: string
+  tools: string[]
+  githubLink: string
+  linkPage: string
+}

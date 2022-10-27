@@ -4,7 +4,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import BookIcon from '@mui/icons-material/Book'
 import EmailIcon from '@mui/icons-material/Email'
 import { motion } from 'framer-motion'
-import { socialVariant } from '../mocks/framerMotionEffect'
+import { socialVariant } from '@/mocks/framerMotionEffect'
 
 function Social() {
   return (

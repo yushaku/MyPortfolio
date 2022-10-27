@@ -1,10 +1,10 @@
 import React from 'react'
 import CloseIcon from '@mui/icons-material/Close'
-import { showNavbar, themeMode } from '../atoms/storeAtom'
+import { showNavbar, themeMode } from '@/atoms/storeAtom'
 import { useRecoilState } from 'recoil'
 import { motion } from 'framer-motion'
-import { navbarList } from '../mocks/navbarList'
-import { delayShowOf } from '../mocks/framerMotionEffect'
+import { navbarList } from '@/mocks/navbarList'
+import { delayShowOf } from '@/mocks/framerMotionEffect'
 
 const variantBtn = {
   hidden: {

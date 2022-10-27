@@ -2,12 +2,12 @@ import React from 'react'
 import DarkModeIcon from '@mui/icons-material/DarkMode'
 import LightModeIcon from '@mui/icons-material/LightMode'
 import { useRecoilState } from 'recoil'
-import { showNavbar, themeMode } from '../atoms/storeAtom'
+import { showNavbar, themeMode } from '@/atoms/storeAtom'
 import DensityMediumIcon from '@mui/icons-material/DensityMedium'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { listVariants, delayShowOf, showOut } from '../mocks/framerMotionEffect'
-import { navbarList } from '../mocks/navbarList'
+import { listVariants, delayShowOf, showOut } from '@/mocks/framerMotionEffect'
+import { navbarList } from '@/mocks/navbarList'
 
 function Header() {
   const [isDarkMode, setIsDarkMode] = useRecoilState(themeMode)

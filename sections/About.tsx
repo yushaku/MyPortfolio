@@ -1,13 +1,35 @@
-import React from 'react'
-import { programmingLanguage } from '../mocks/workList'
 import Image from 'next/image'
+import React from 'react'
+
+import useScrollAnimation from '@/hooks/useScrollAnimation'
+import { programmingLanguage } from '@/mocks/workList'
 
 function About() {
+  const { ref, control, motion } = useScrollAnimation()
+  const scrollVariant = {
+    hidden: {
+      opacity: 0.5,
+      scale: 0.7,
+      x: 300,
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      x: 0,
+      transition: {
+        duration: 1,
+      },
+    },
+  }
+
   return (
-    <div
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={control}
+      variants={scrollVariant}
       id="About_Section"
-      className="pb-[56px] w-[100vw] 
-      px-[25px] sm:px-[50px] md:px-[100px] lg:px-[300px]"
+      className="pb-[56px] w-[100vw] px-[25px] sm:px-[50px] md:px-[100px] lg:px-[300px]"
     >
       <div>
         <div className="flex items-center gap-3 mb-[40px] ">
@@ -61,7 +83,7 @@ function About() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

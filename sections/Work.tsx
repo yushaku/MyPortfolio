@@ -1,16 +1,36 @@
 import React, { useState } from 'react'
-import { workedList } from '../mocks/workList'
+
+import useScrollAnimation from '@/hooks/useScrollAnimation'
+import { workedList } from '@/mocks/workList'
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord'
 
 function Work() {
+  const { ref, control, motion } = useScrollAnimation()
   const firstWork = workedList[0].title
   const [showWork, setShowWork] = useState(firstWork)
-
+  const scrollVariant = {
+    hidden: {
+      opacity: 0.5,
+      scale: 0.5,
+      x: -300,
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      x: 0,
+      transition: {
+        duration: 1,
+      },
+    },
+  }
   return (
-    <div
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={control}
+      variants={scrollVariant}
       id="Work_Section"
-      className="w-[100vw] py-[10vh]
-      px-[25px] sm:px-[50px] md:px-[100px] lg:px-[250px]"
+      className="w-[100vw] py-[10vh] px-[25px] sm:px-[50px] md:px-[100px] lg:px-[250px]"
     >
       <div className="flex items-center gap-2">
         <h2 className="text-3xl">
@@ -62,7 +82,7 @@ function Work() {
           })}
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
