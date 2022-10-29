@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import React from 'react'
 
 import useScrollAnimation from '@/hooks/useScrollAnimation'
@@ -7,6 +6,8 @@ import ModelEarth from './model3D'
 
 function Intro() {
   const { ref, control, motion } = useScrollAnimation()
+
+  console.log(control.mount.name)
 
   return (
     <div
@@ -81,16 +82,11 @@ function Intro() {
         </motion.a>
       </div>
 
-      <motion.div
-        ref={ref}
-        custom={7}
-        variants={delayShowOf}
-        initial="hidden"
-        animate={control}
-        className="hidden lg:block"
-      >
-        <ModelEarth />
-      </motion.div>
+      <div className="hidden lg:block">
+        <motion.div custom={7} variants={delayShowOf} initial="hidden" animate="visible">
+          <ModelEarth />
+        </motion.div>
+      </div>
     </div>
   )
 }

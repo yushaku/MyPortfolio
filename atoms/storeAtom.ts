@@ -1,7 +1,7 @@
 import { atom } from 'recoil'
 
 export const themeMode = atom({
-  key: 'darkMode',
+  key: 'theme',
   default: true,
 })
 

@@ -4,6 +4,7 @@ import { useRecoilState } from 'recoil'
 import { showFormContact } from '@/atoms/storeAtom'
 import useScrollAnimation from '@/hooks/useScrollAnimation'
 import { scrollVariant } from '@/mocks/framerMotionEffect'
+import Image from 'next/image'
 
 function Contact() {
   const [isShowFormContact, setIsShowFormContact] = useRecoilState(showFormContact)
@@ -20,7 +21,7 @@ function Contact() {
       animate={control}
       variants={scrollVariant}
       id="Contact_Section"
-      className="ContactSection w-[100vw] h-[100%] md:h-[70vh] px-[25px] sm:px-[50px] md:px-[100px] lg:px-[250px] mt-[20vh] relative"
+      className="ContactSection w-[100vw] h-[100%] md:h-[70vh] px-[25px] sm:px-[50px] md:px-[100px] lg:px-[250px] mt-[20vh] relative flex justify-center items-center flex-col md:flex-row"
     >
       <div className="flex flex-col items-center justify-center h-[70%]">
         <h3 className="text-3xl pb-9">
@@ -35,6 +36,9 @@ function Contact() {
           question or just want to say hi, I will try my best to get back to you!
         </p>
         <Button title="Say hello" setOnClick={handleOpenFormConnect} />
+      </div>
+      <div className="mt-5">
+        <Image src="/51.png" alt="email image" width={500} height={500}></Image>
       </div>
     </motion.div>
   )

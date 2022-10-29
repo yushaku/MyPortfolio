@@ -28,6 +28,7 @@ const Home: NextPage = () => {
 
     return () => clearTimeout(setLoading)
   }, [])
+
   return (
     <div
       className={`${isDarkMode && 'dark'}
@@ -42,7 +43,7 @@ const Home: NextPage = () => {
       {isLoading ? (
         <LoadingPage />
       ) : (
-        <main className="bg-bgLight text-textLight dark:bg-bgDark dark:text-[#f5f5f7]  relative ">
+        <main className="bg-bgLight text-textLight dark:bg-bgDark dark:text-[#f5f5f7] relative overflow-hidden">
           <Header data-aos="fade-down" />
           <Intro />
           <Social />

@@ -95,7 +95,6 @@ export const delayShowProject = {
     y: 0,
     transition: {
       duration: 1,
-      delay: i * 0.6,
     },
   }),
 }

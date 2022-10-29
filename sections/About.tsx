@@ -8,14 +8,14 @@ function About() {
   const { ref, control, motion } = useScrollAnimation()
   const scrollVariant = {
     hidden: {
-      opacity: 0.5,
-      scale: 0.7,
-      x: 300,
+      opacity: 0.1,
+      scale: 0.5,
+      y: -200,
     },
     visible: {
       opacity: 1,
       scale: 1,
-      x: 0,
+      y: 0,
       transition: {
         duration: 1,
       },
