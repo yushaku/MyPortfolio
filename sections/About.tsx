@@ -9,13 +9,13 @@ function About() {
   const scrollVariant = {
     hidden: {
       opacity: 0.1,
-      scale: 0.5,
-      y: -200,
+      scale: 1,
+      x: 200,
     },
     visible: {
       opacity: 1,
       scale: 1,
-      y: 0,
+      x: 0,
       transition: {
         duration: 1,
       },
@@ -29,7 +29,7 @@ function About() {
       animate={control}
       variants={scrollVariant}
       id="About_Section"
-      className="pb-[56px] w-[100vw] px-[25px] sm:px-[50px] md:px-[100px] lg:px-[300px]"
+      className="h-[100vh] flex items-center w-[100vw] px-[25px] sm:px-[50px] md:px-[100px] lg:px-[300px]"
     >
       <div>
         <div className="flex items-center gap-3 mb-[40px] ">

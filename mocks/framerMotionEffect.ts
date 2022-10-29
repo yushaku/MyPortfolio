@@ -84,17 +84,17 @@ export const projectVariant = {
 }
 
 export const delayShowProject = {
-  hidden: {
-    opacity: 0,
-    x: -200,
-    y: 100,
+  hidden: (i: number) => {
+    return {
+      opacity: 0,
+      x: i % 2 === 1 ? 200 : -200,
+    }
   },
-  visible: (i: number) => ({
+  visible: {
     opacity: 1,
     x: 0,
-    y: 0,
     transition: {
       duration: 1,
     },
-  }),
+  },
 }

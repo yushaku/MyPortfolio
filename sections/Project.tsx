@@ -10,7 +10,7 @@ function Project() {
     <motion.div
       variants={projectVariant}
       id="Experience_Section"
-      className="w-[100vw] px-[25px] sm:px-[50px] md:px-[100px] lg:px-[250px] mt-[8vh] flex flex-col items-start justify-center"
+      className="pt-[20vh] w-[100vw] px-[25px] sm:px-[50px] md:px-[100px] lg:px-[250px] mt-[8vh] flex flex-col items-start justify-center"
     >
       <div className="TITLE flex items-center gap-3 mb-[40px]">
         <h3 className="text-3xl">
