@@ -29,7 +29,7 @@ function About() {
       animate={control}
       variants={scrollVariant}
       id="About_Section"
-      className="h-[100vh] flex items-center w-[100vw] px-[25px] sm:px-[50px] md:px-[100px] lg:px-[300px]"
+      className="container mx-auto mt-7 min-h-[100vh] flex items-center p-8"
     >
       <div>
         <div className="flex items-center gap-3 mb-[40px] ">

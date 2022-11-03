@@ -8,6 +8,7 @@ module.exports = {
       'res.cloudinary.com',
       'raw.githubusercontent.com',
       'w7.pngwing.com',
+      'user-images.githubusercontent.com',
     ],
   },
   env: {

@@ -30,7 +30,7 @@ function Work() {
       animate={control}
       variants={scrollVariant}
       id="Work_Section"
-      className="h-full flex items-center w-[100vw] py-[20vh] px-[25px] sm:px-[50px] md:px-[100px] lg:px-[250px]"
+      className="container mx-auto min-h-[70vh] flex items-center px-8"
     >
       <div>
         <div className="flex items-center gap-2">

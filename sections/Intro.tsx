@@ -3,21 +3,18 @@ import React from 'react'
 import useScrollAnimation from '@/hooks/useScrollAnimation'
 import { delayShowOf } from '@/mocks/framerMotionEffect'
 import ModelEarth from './model3D'
+import Image from 'next/image'
 
 function Intro() {
   const { ref, control, motion } = useScrollAnimation()
 
-  console.log(control.mount.name)
-
   return (
     <div
       id="Intro_Section"
-      className="h-[100vh] w-[100vw] container mx-auto
-      pl-[25px] sm:pl-[50px] md:pl-[100px] lg:pl-[250px] mt-[8vh] 
-      md:-translate-y-[40px]
+      className="min-h-[100vh] container mx-auto p-8
       flex items-center md:flex-row"
     >
-      <div className="max-w-50%">
+      <div className="">
         <motion.h3
           ref={ref}
           custom={2}
@@ -84,7 +81,8 @@ function Intro() {
 
       <div className="hidden lg:block">
         <motion.div custom={7} variants={delayShowOf} initial="hidden" animate="visible">
-          <ModelEarth />
+          {/* <ModelEarth /> */}
+          <Image src="/3.png" alt="image 3d" height={550} width={550} />
         </motion.div>
       </div>
     </div>
