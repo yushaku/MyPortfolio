@@ -2,7 +2,7 @@ import React from 'react'
 
 import useScrollAnimation from '@/hooks/useScrollAnimation'
 import { delayShowOf } from '@/mocks/framerMotionEffect'
-import ModelEarth from './model3D'
+// import ModelEarth from './model3D'
 import Image from 'next/image'
 
 function Intro() {
@@ -57,8 +57,9 @@ function Intro() {
           animate={control}
           className="text-textGrayLight dark:text-textGrayDark pr-[80px] text-[20px] max-w-[800px] mb-[5.35rem]"
         >
-          I am a software engineer specializing in building (and occasionally designing) exceptional digital
-          experiences. Currently, I am focused on building accessible, human-centered products at
+          I am a software engineer specializing in building exceptional digital experiences, Write modern, performant,
+          maintainable application for client. Currently, I am focused on building accessible, human-centered products
+          at
           <a
             href="https://zinza.com.vn/vi/"
             className="pl-2 transition-all duration-700 text-colorPrimary dark:text-colorGreenhover:decoration-solid hover:underline"
@@ -80,9 +81,9 @@ function Intro() {
       </div>
 
       <div className="hidden lg:block">
-        <motion.div custom={7} variants={delayShowOf} initial="hidden" animate="visible">
+        <motion.div custom={9} variants={delayShowOf} initial="hidden" animate="visible">
           {/* <ModelEarth /> */}
-          <Image src="/3.png" alt="image 3d" height={550} width={550} />
+          <Image src="/3.png" alt="image 3d" height={550} width={550} loading="lazy" />
         </motion.div>
       </div>
     </div>

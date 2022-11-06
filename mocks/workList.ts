@@ -6,19 +6,17 @@ export const workedList = [
     position: 'full-stack web developer',
     describe: [
       'Write modern, performant, maintainable code for a diverse array of client and internal projects',
-      'Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, WordPress, Prismic, and Netlify',
+      'Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Nestjs, React, Nextjs, WordPress, Vercel, and Netlify',
       'Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis',
     ],
   },
   {
     id: 2,
-    title: 'upwork',
+    title: 'Upwork',
     position: 'full-stack web developer',
-    date: 'july 2022 - present',
+    date: 'October 2022 - present',
     describe: [
-      'Write modern, performant, maintainable code for a diverse array of client and internal projects',
-      'Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, WordPress, Prismic, and Netlify',
-      'Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis',
+      'Communicate with clients about projects, clarify their requirements and ultimately help them to the best of my ability.',
     ],
   },
 ]
