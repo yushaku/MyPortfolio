@@ -30,12 +30,12 @@ function Work() {
       animate={control}
       variants={scrollVariant}
       id="Work_Section"
-      className="container mx-auto min-h-[70vh] flex items-center px-8"
+      className="container mx-auto min-h-[50vh] flex items-center px-8"
     >
       <div>
         <div className="flex items-center gap-2">
           <h2 className="text-3xl">
-            <span className="dark:text-colorGreen">02.</span> Where i have worked
+            <span className="dark:text-colorGreen text-colorPrimary">02.</span> Where i have worked
           </h2>
           <p className="h-[2px] w-[250px] bg-gray-600 translate-y-1"></p>
         </div>
@@ -47,7 +47,7 @@ function Work() {
                 return (
                   <li
                     key={item.id}
-                    className={`text-lg py-1 px-4 ${showWork === item.title && 'bg-[#153b5f]'}`}
+                    className={`text-lg py-1 px-4 text-white ${showWork === item.title && 'bg-[#153b5f]'}`}
                     onClick={() => setShowWork(item.title)}
                   >
                     <span>{item.title}</span>
@@ -62,17 +62,18 @@ function Work() {
               return (
                 <div key={item.id} className={`text-lg py-2 px-4 ${showWork != item.title && 'hidden'}`}>
                   <h1 className="text-xl">
-                    {item.position} <span className="font-semibold dark:text-colorGreen">@{item.title}</span>
+                    {item.position}{' '}
+                    <span className="font-semibold dark:text-colorGreen text-colorPrimary">@{item.title}</span>
                   </h1>
-                  <p className="text-sm text-textGrayDark">{item.date}</p>
+                  <p className="text-sm dark:text-textGrayDark text-textLight">{item.date}</p>
                   <ul className="mt-3">
                     {item.describe.map((descItem, index) => {
                       return (
                         <li
                           key={index}
-                          className="flex items-center justify-start gap-3 pb-2 leading-6 text-textGrayDark"
+                          className="flex items-center justify-start gap-3 pb-2 leading-6 text-textGrayLight dark:text-textGrayDark"
                         >
-                          <FiberManualRecordIcon className=" dark:bg-colorGreen rounded-full !text-[10px]" />
+                          <FiberManualRecordIcon className=" dark:bg-colorGreen bg-colorPrimary rounded-full !text-[10px]" />
                           <span>{descItem}</span>
                         </li>
                       )

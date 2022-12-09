@@ -21,15 +21,15 @@ function Contact() {
       animate={control}
       variants={scrollVariant}
       id="Contact_Section"
-      className="ContactSection w-[100vw] h-[100%] md:h-[70vh] px-[25px] sm:px-[50px] md:px-[100px] lg:px-[250px] mt-[20vh] relative flex justify-center items-center flex-col md:flex-row"
+      className="ContactSection w-[100vw] h-full md:h-[70vh] px-[25px] sm:px-[50px] md:px-[100px] lg:px-[250px] mt-[20vh] relative flex justify-center items-center flex-col md:flex-row"
     >
       <div className="flex flex-col items-center justify-center h-[70%]">
         <h3 className="text-3xl pb-9">
-          <span className="text-colorGreen">04.</span> Interested in working with me?
+          <span className="text-colorPrimary dark:text-colorGreen">04.</span> Interested in working with me?
         </h3>
-        <h1 className="text-[60px] font-semibold text-[#ccd6f6] pb-9">Get In Touch</h1>
+        <h1 className="text-[60px] font-semibold dark:text-[#ccd6f6] text-textGrayLight pb-9">Get In Touch</h1>
         <p
-          className=" text-textGrayDark my-4 pb-9
+          className=" dark:text-textGrayDark text-textLight my-4 pb-9
           max-w-[600px] md:max-w-[360px] lg:max-w-[400px] xl:max-w-[600px]"
         >
           Although i am not currently looking for any new opportunities, my inbox is always open. Whether you have a

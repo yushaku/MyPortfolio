@@ -14,7 +14,7 @@ function Project() {
     >
       <div className="TITLE flex items-center gap-3 mb-[40px]">
         <h3 className="text-3xl">
-          <span className="text-colorGreen">03. </span> Some Projects I have Built
+          <span className="dark:text-colorGreen text-colorPrimary">03. </span> Some Projects I have Built
         </h3>
         <p className="h-[2px] w-[250px] bg-gray-600 translate-y-1"></p>
       </div>

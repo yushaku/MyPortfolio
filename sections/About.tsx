@@ -8,7 +8,7 @@ function About() {
   const { ref, control, motion } = useScrollAnimation()
   const scrollVariant = {
     hidden: {
-      opacity: 0.1,
+      opacity: 0,
       scale: 1,
       x: 200,
     },
@@ -18,7 +18,6 @@ function About() {
       x: 0,
       transition: {
         duration: 1,
-        delay: 0.5,
       },
     },
   }
@@ -30,19 +29,19 @@ function About() {
       animate={control}
       variants={scrollVariant}
       id="About_Section"
-      className="container mx-auto mt-7 min-h-[100vh] flex items-center p-8"
+      className="container mx-auto mt-7 min-h-[60vh] flex items-center p-8"
     >
       <div>
         <div className="flex items-center gap-3 mb-[40px] ">
           <h3 className="text-3xl">
-            <span className=" text-colorGreen">0.1</span> About me
+            <span className="text-colorPrimary dark:text-colorGreen">0.1</span> About me
           </h3>
           <p className="h-[2px] w-[250px] bg-gray-600 translate-y-1"></p>
         </div>
 
         <div
           className="grid grid-cols-1 xl:grid-cols-2 items-center
-          gap-10 md:gap-20 text-[19px] text-textDark"
+          gap-10 md:gap-20 text-[19px] text-textLight dark:text-textDark"
         >
           <div className="flex flex-col gap-3 left">
             <p>
@@ -68,7 +67,7 @@ function About() {
           </div>
 
           <div className="right h-[400px] cursor-pointer ">
-            <div className="flex justify-center group items">
+            <div className="flex justify-center group items grayscale hover:grayscale-0 transition-all duration-500">
               <Image
                 src="/yushaku2.jpg"
                 alt="le van son"

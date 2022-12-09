@@ -10,15 +10,15 @@ export const workedList = [
       'Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis',
     ],
   },
-  {
-    id: 2,
-    title: 'Upwork',
-    position: 'full-stack web developer',
-    date: 'October 2022 - present',
-    describe: [
-      'Communicate with clients about projects, clarify their requirements and ultimately help them to the best of my ability.',
-    ],
-  },
+  // {
+  //   id: 2,
+  //   title: 'Upwork',
+  //   position: 'full-stack web developer',
+  //   date: 'October 2022 - present',
+  //   describe: [
+  //     'Communicate with clients about projects, clarify their requirements and ultimately help them to the best of my ability.',
+  //   ],
+  // },
 ]
 
 export const programmingLanguage = [
