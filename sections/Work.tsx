@@ -23,6 +23,7 @@ function Work() {
       },
     },
   }
+
   return (
     <motion.div
       ref={ref}

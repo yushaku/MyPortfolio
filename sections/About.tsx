@@ -40,22 +40,43 @@ function About() {
         </div>
 
         <div
-          className="grid grid-cols-1 xl:grid-cols-2 items-center
+          className="grid grid-cols-1 xl:grid-cols-3 items-center
           gap-10 md:gap-20 text-[19px] text-textLight dark:text-textDark"
         >
-          <div className="flex flex-col gap-3 left">
+          <div className="right h-[400px] cursor-pointer ">
+            <div className="flex justify-center group items transition-all duration-500">
+              <Image
+                src="/developer.png"
+                alt="le van son"
+                className="mt-2 rounded-full"
+                width={500}
+                height={500}
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-3 left col-span-2">
             <p>
-              Hello! My name is Yushaku and I enjoy creating things that live on the internet. My interest in web
-              development started back in 2020 when I decided to try coding a website to promote the
-              {" family's  motel"} room — turns out taught me a lot about HTML, CSS and javascript! and make me in love
-              with job as web developer
+              Hello, my name is Yushaku and I&apos;m passionate about creating digital experiences that live on the
+              internet. My interest in web development started in 2020 when I decided to create a website to promote my
+              family&apos;s motel room. Through this project, I discovered a love for coding and gained experience with
+              HTML, CSS, and JavaScript.
             </p>
             <p>
-              Fast-forward to today, and I have had the experience of working at a start-up, a corporation. My main
-              focus these days is building accessible, inclusive products and digital experiences at Upstatement for a
-              variety of clients.
+              Since then, I have gained experience working at both startups and corporations. Currently, I work at
+              Upstatement where my focus is on building accessible and inclusive digital products and experiences for a
+              diverse range of clients. I am committed to staying up-to-date with the latest web development trends and
+              technologies, and I enjoy collaborating with my colleagues to create innovative solutions that meet the
+              needs of our clients and their users.
+            </p>
+
+            <p>
+              I am excited about the possibilities that web development offers and I am continually seeking new
+              opportunities to grow and expand my skills as a web developer.
             </p>
             <p>Here are a few technologies I have been working with recently:</p>
+
             <ul className="flex flex-wrap items-center gap-8">
               {programmingLanguage.map((Language) => (
                 <li key={Language.id} className="flex gap-1 items-center justify-center text-[19px]">
@@ -64,19 +85,6 @@ function About() {
                 </li>
               ))}
             </ul>
-          </div>
-
-          <div className="right h-[400px] cursor-pointer ">
-            <div className="flex justify-center group items grayscale hover:grayscale-0 transition-all duration-500">
-              <Image
-                src="/yushaku2.jpg"
-                alt="le van son"
-                className="mt-2 rounded-full bject-contain "
-                width={350}
-                height={350}
-                loading="lazy"
-              />
-            </div>
           </div>
         </div>
       </div>

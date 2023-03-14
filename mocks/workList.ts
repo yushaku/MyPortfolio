@@ -5,6 +5,7 @@ export const workedList = [
     date: 'march 2022 - present',
     position: 'full-stack web developer',
     describe: [
+      "I am currently working at Zinza, where I collaborate with a talented team of developers, and product managers to create human-centered solutions that meet the unique needs of our clients. I approach every project with a dedication to delivering high-quality work that exceeds expectations. I am excited to continue pushing the boundaries of what's possible in software engineering, and to help shape the future of digital experiences for users around the world.",
       'Write modern, performant, maintainable code for a diverse array of client and internal projects',
       'Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Nestjs, React, Nextjs, WordPress, Vercel, and Netlify',
       'Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis',

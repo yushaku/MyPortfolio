@@ -9,19 +9,21 @@ import { socialVariant } from '@/mocks/framerMotionEffect'
 
 function Social() {
   return (
-    <div className="hidden md:block dark:text-textGrayDark">
+    <div className="hidden md:block dark:text-textGrayDark z-100">
       <div className="right text-2xl fixed bottom-[10px] left-[1.8rem]">
-        <ul className="flex flex-col items-center justify-center gap-8">
+        <ul className="flex flex-col items-center justify-center gap-8 cursor-pointer">
           <motion.li initial="hidden" animate="visible" variants={socialVariant}>
             <Link target="_blank" href="https://github.com/yushaku" rel="noreferrer">
               <GitHubIcon className="text-3xl transition-all duration-700 hover:scale-150 dark:hover:text-colorGreen hover:text-colorPrimary" />
             </Link>
           </motion.li>
+
           <motion.li initial="hidden" animate="visible" variants={socialVariant}>
             <Link target="_blank" href="https://www.linkedin.com/in/levanson180200/" rel="noreferrer">
               <LinkedInIcon className="text-3xl transition-all duration-700 hover:scale-150 dark:hover:text-colorGreen hover:text-colorPrimary" />
             </Link>
           </motion.li>
+
           <motion.li initial="hidden" animate="visible" variants={socialVariant}>
             <Link target="_blank" href="https://yushaku.vercel.app/" rel="noreferrer">
               <BookIcon className="text-3xl transition-all duration-700 hover:scale-150 dark:hover:text-colorGreen hover:text-colorPrimary" />

@@ -1,8 +1,7 @@
 import React from 'react'
-
 import useScrollAnimation from '@/hooks/useScrollAnimation'
 import { delayShowOf } from '@/mocks/framerMotionEffect'
-// import ModelEarth from './model3D'
+import ModelEarth from './model3D'
 import Image from 'next/image'
 
 function Intro() {
@@ -49,6 +48,7 @@ function Intro() {
         >
           I am a full-stack developer.
         </motion.h2>
+
         <motion.p
           ref={ref}
           custom={5}
@@ -57,16 +57,12 @@ function Intro() {
           animate={control}
           className="text-textGrayLight dark:text-textGrayDark pr-[80px] text-[20px] max-w-[800px] mb-[5.35rem]"
         >
-          I am a software engineer specializing in building exceptional digital experiences, Write modern, performant,
-          maintainable application for client. Currently, I am focused on building accessible, human-centered products
-          at
-          <a
-            href="https://zinza.com.vn/vi/"
-            className="pl-2 transition-all duration-700 text-colorPrimary dark:text-colorGreenhover:decoration-solid hover:underline"
-          >
-            Zinza technology.
-          </a>
+          As a software engineer with a passion for creating exceptional digital experiences, I specialize in developing
+          modern, performant, and maintainable applications for clients. My current focus is on building products that
+          are not only accessible, but also put the needs and preferences of users at the forefront of the design
+          process.
         </motion.p>
+
         <motion.a
           ref={ref}
           custom={6}
@@ -82,8 +78,8 @@ function Intro() {
 
       <div className="hidden lg:block">
         <motion.div custom={9} variants={delayShowOf} initial="hidden" animate="visible">
-          {/* <ModelEarth /> */}
-          <Image src="/3.png" alt="image 3d" height={550} width={550} loading="lazy" />
+          <ModelEarth />
+          {/* <Image src="/3.png" alt="image 3d" height={550} width={550} loading="lazy" /> */}
         </motion.div>
       </div>
     </div>
