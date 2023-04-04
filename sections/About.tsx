@@ -78,7 +78,7 @@ function About() {
             <p>Here are a few technologies I have been working with recently:</p>
 
             <ul className="flex flex-wrap items-center gap-8">
-              {programmingLanguage.map(({ id, iconLink: Icon, title }) => (
+              {programmingLanguage.map(({ iconLink: Icon, title }, id) => (
                 <li key={id} className="flex gap-1 items-center justify-center text-[19px]">
                   <span className="w-6 h-6">
                     <Icon />

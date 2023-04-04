@@ -1,4 +1,18 @@
-import { CssIcon, DockerIcon, ExpressIcon, GithubIcon, GitIcon, HtmlIcon, JsIcon, NextIcon, PostgesIcon, ReactIcon, TailwindIcon, TsIcon } from '@/components/icons'
+import {
+  CssIcon,
+  DockerIcon,
+  ExpressIcon,
+  GithubIcon,
+  GitIcon,
+  HtmlIcon,
+  JsIcon,
+  NestIcon,
+  NextIcon,
+  PostgesIcon,
+  ReactIcon,
+  TailwindIcon,
+  TsIcon,
+} from '@/components/icons'
 import { NodeIcon } from '@/components/icons/NodeIcon'
 
 export const workedList = [
@@ -25,71 +39,61 @@ export const workedList = [
   // },
 ]
 
-
 export const programmingLanguage = [
   {
-    id: 1,
     title: 'HTML',
     iconLink: HtmlIcon,
   },
   {
-    id: 2,
     title: 'CSS',
     iconLink: CssIcon,
   },
   {
-    id: 3,
     title: 'TailWindcss',
     iconLink: TailwindIcon,
   },
   {
-    id: 4,
     title: 'JavaScript',
     iconLink: JsIcon,
   },
   {
-    id: 5,
     title: 'TypeScript',
     iconLink: TsIcon,
   },
   {
-    id: 6,
     title: 'ReactJs',
     iconLink: ReactIcon,
   },
   {
-    id: 7,
     title: 'NextJs',
     iconLink: NextIcon,
   },
   {
-    id: 8,
     title: 'NodeJs',
     iconLink: NodeIcon,
   },
   {
-    id: 9,
     title: 'ExpressJs',
     iconLink: ExpressIcon,
   },
   {
-    id: 10,
-    title: 'MySql',
+    title: 'Nestjs',
+    iconLink: NestIcon,
+  },
+  {
+    title: 'PostgreSql',
     iconLink: PostgesIcon,
   },
   {
-    id: 11,
     title: 'Docker',
     iconLink: DockerIcon,
   },
   {
-    id: 12,
     title: 'Git',
     iconLink: GitIcon,
   },
   {
-    id: 13,
     title: 'Github',
     iconLink: GithubIcon,
-  }
+  },
 ]
