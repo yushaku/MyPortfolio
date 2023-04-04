@@ -1,8 +1,8 @@
 import React from 'react'
+import ModelEarth from './model3D'
 import useScrollAnimation from '@/hooks/useScrollAnimation'
 import { delayShowOf } from '@/mocks/framerMotionEffect'
-import ModelEarth from './model3D'
-import Image from 'next/image'
+// import Image from 'next/image'
 
 function Intro() {
   const { ref, control, motion } = useScrollAnimation()

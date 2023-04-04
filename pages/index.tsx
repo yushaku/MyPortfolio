@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
-import React from 'react'
 import Head from 'next/head'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useRecoilValue } from 'recoil'
 import { showFormContact, showNavbar, themeMode } from '../atoms/storeAtom'
+import FormContact from '../components/FormContact'
 import About from '../sections/About'
 import Contact from '../sections/Contact'
 import Header from '../sections/Header'
@@ -13,7 +13,6 @@ import Navbar from '../sections/Navbar'
 import Project from '../sections/Project'
 import Social from '../sections/Social'
 import Work from '../sections/Work'
-import FormContact from '../components/FormContact'
 
 const Home: NextPage = () => {
   const isDarkMode = useRecoilValue(themeMode)

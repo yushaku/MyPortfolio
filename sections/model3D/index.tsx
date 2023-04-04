@@ -1,12 +1,13 @@
-import React from 'react'
-import { Suspense } from 'react'
-import { Canvas, useLoader } from '@react-three/fiber'
 import { Environment, OrbitControls } from '@react-three/drei'
+import { Canvas, useLoader } from '@react-three/fiber'
+import React, { Suspense } from 'react'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
 const ModelEarth = () => {
-  // location of the 3D model
-  const gltf = useLoader(GLTFLoader, '/earth/scene.gltf')
+  const gltf = useLoader(GLTFLoader, '/earth/scene.gltf', (error) => {
+    console.error(error)
+  })
+
   return (
     <>
       <Canvas

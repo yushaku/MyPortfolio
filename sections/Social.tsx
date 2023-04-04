@@ -1,10 +1,10 @@
-import React from 'react'
-import GitHubIcon from '@mui/icons-material/GitHub'
-import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import BookIcon from '@mui/icons-material/Book'
 import EmailIcon from '@mui/icons-material/Email'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import React from 'react'
 import { socialVariant } from '@/mocks/framerMotionEffect'
 
 function Social() {

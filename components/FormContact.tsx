@@ -1,14 +1,13 @@
+import emailjs from '@emailjs/browser'
+import CloseIcon from '@mui/icons-material/Close'
 import { motion } from 'framer-motion'
 import React from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { useRecoilState } from 'recoil'
-
 import { showFormContact } from '@/atoms/storeAtom'
 import { envEmailjs } from '@/constants/emailjs'
 import useToastMessage from '@/hooks/useToastMessage'
 import { showOut } from '@/mocks/framerMotionEffect'
-import emailjs from '@emailjs/browser'
-import CloseIcon from '@mui/icons-material/Close'
 
 type FormEmail = {
   name: string

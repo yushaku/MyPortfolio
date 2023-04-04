@@ -1,8 +1,8 @@
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord'
 import React, { useState } from 'react'
 
 import useScrollAnimation from '@/hooks/useScrollAnimation'
 import { workedList } from '@/mocks/workList'
-import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord'
 
 function Work() {
   const { ref, control, motion } = useScrollAnimation()

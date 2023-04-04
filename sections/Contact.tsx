@@ -1,10 +1,10 @@
+import Image from 'next/image'
 import React from 'react'
-import Button from '@/components/Button'
 import { useRecoilState } from 'recoil'
 import { showFormContact } from '@/atoms/storeAtom'
+import Button from '@/components/Button'
 import useScrollAnimation from '@/hooks/useScrollAnimation'
 import { scrollVariant } from '@/mocks/framerMotionEffect'
-import Image from 'next/image'
 
 function Contact() {
   const [isShowFormContact, setIsShowFormContact] = useRecoilState(showFormContact)

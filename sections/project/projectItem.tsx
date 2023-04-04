@@ -1,12 +1,12 @@
+import GitHubIcon from '@mui/icons-material/GitHub'
+import SendIcon from '@mui/icons-material/Send'
+import Image from 'next/image'
 import React from 'react'
 import Tilt from 'react-parallax-tilt'
-import Image from 'next/image'
 
 import useScrollAnimation from '@/hooks/useScrollAnimation'
 import { delayShowProject } from '@/mocks/framerMotionEffect'
 import { ProjectEntity } from '@/mocks/projectList'
-import GitHubIcon from '@mui/icons-material/GitHub'
-import SendIcon from '@mui/icons-material/Send'
 
 const ProjectItem = ({ project, index }: { project: ProjectEntity; index: number }) => {
   const { ref, control, motion } = useScrollAnimation()

@@ -1,9 +1,9 @@
+import { motion } from 'framer-motion'
 import React from 'react'
 
+import ProjectItem from './project/projectItem'
 import { projectVariant } from '@/mocks/framerMotionEffect'
 import { projectList } from '@/mocks/projectList'
-import ProjectItem from './project/projectItem'
-import { motion } from 'framer-motion'
 
 function Project() {
   return (

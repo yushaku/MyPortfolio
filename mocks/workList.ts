@@ -1,3 +1,6 @@
+import { CssIcon, DockerIcon, ExpressIcon, GithubIcon, GitIcon, HtmlIcon, JsIcon, NextIcon, PostgesIcon, ReactIcon, TailwindIcon, TsIcon } from '@/components/icons'
+import { NodeIcon } from '@/components/icons/NodeIcon'
+
 export const workedList = [
   {
     id: 1,
@@ -22,61 +25,71 @@ export const workedList = [
   // },
 ]
 
+
 export const programmingLanguage = [
   {
     id: 1,
     title: 'HTML',
-    iconLink: 'https://cdn-icons-png.flaticon.com/128/5968/5968267.png',
+    iconLink: HtmlIcon,
   },
   {
     id: 2,
     title: 'CSS',
-    iconLink: 'https://cdn-icons-png.flaticon.com/128/5968/5968242.png',
+    iconLink: CssIcon,
   },
   {
     id: 3,
     title: 'TailWindcss',
-    iconLink: 'https://res.cloudinary.com/arcjet-media/image/upload/v1608734952/z8hzeszc9eb3sp3vp3qc.jpg',
+    iconLink: TailwindIcon,
   },
   {
     id: 4,
     title: 'JavaScript',
-    iconLink: 'https://cdn-icons-png.flaticon.com/128/5968/5968292.png',
+    iconLink: JsIcon,
   },
   {
     id: 5,
     title: 'TypeScript',
-    iconLink: 'https://cdn-icons-png.flaticon.com/128/5968/5968381.png',
+    iconLink: TsIcon,
   },
   {
     id: 6,
     title: 'ReactJs',
-    iconLink: 'https://cdn-icons-png.flaticon.com/512/1126/1126012.png',
+    iconLink: ReactIcon,
   },
   {
     id: 7,
     title: 'NextJs',
-    iconLink: 'https://raw.githubusercontent.com/Rohan-Shakya/Rohan-Shakya/master/images/next_logo.png',
+    iconLink: NextIcon,
   },
   {
     id: 8,
     title: 'NodeJs',
-    iconLink: 'https://cdn-icons-png.flaticon.com/128/5968/5968322.png',
+    iconLink: NodeIcon,
   },
   {
     id: 9,
     title: 'ExpressJs',
-    iconLink:
-      'https://w7.pngwing.com/pngs/1/116/png-transparent-socket-io-node-js-express-js-javascript-others-angle-text-trademark.png',
+    iconLink: ExpressIcon,
   },
   {
     id: 10,
     title: 'MySql',
-    iconLink: 'https://cdn-icons-png.flaticon.com/128/5968/5968313.png',
+    iconLink: PostgesIcon,
   },
   {
     id: 11,
     title: 'Docker',
-    iconLink: 'https://cdn-icons-png.flaticon.com/512/919/919853.png',
+    iconLink: DockerIcon,
   },
+  {
+    id: 12,
+    title: 'Git',
+    iconLink: GitIcon,
+  },
+  {
+    id: 13,
+    title: 'Github',
+    iconLink: GithubIcon,
+  }
 ]
