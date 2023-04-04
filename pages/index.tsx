@@ -23,7 +23,7 @@ const Home: NextPage = () => {
   useEffect(() => {
     const setLoading = setTimeout(() => {
       setIsLoading(false)
-    }, 800)
+    }, 50)
 
     return () => clearTimeout(setLoading)
   }, [])
