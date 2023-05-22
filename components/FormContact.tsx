@@ -40,17 +40,17 @@ function FormContact() {
   }
 
   return (
-    <div className="fixed top-0 left-0 flex items-center justify-center rounded-md z-200 w-[100vw] h-[100vh] backdrop-blur-md">
+    <div className="fixed flex items-center justify-center top-0 left-0 w-screen h-screen">
       <div>
         <motion.form
           onSubmit={handleSubmit(sendEmail)}
           initial="hidden"
           animate="visible"
           variants={showOut}
-          className="relative flex flex-col items-center justify-center bg-[#0f2243] w-[650px] h-[90vh]"
+          className="relative flex flex-col items-center justify-center bg-[#0f2243]/80 rounded-xl w-[650px] py-12 z-50"
         >
           <CloseIcon
-            className="absolute top-[60px] right-[12px] cursor-pointer"
+            className="absolute top-[3%] right-[5%] cursor-pointer"
             fontSize="large"
             onClick={() => setIsShowFormContact(!isShowFormContact)}
           />
@@ -103,6 +103,11 @@ function FormContact() {
         </motion.form>
         <ToastMessage />
       </div>
+
+      <div
+        className="fixed top-0 left-0  z-10 w-[100vw] h-[100vh] backdrop-blur-md"
+        onClick={() => setIsShowFormContact(!isShowFormContact)}
+      ></div>
     </div>
   )
 }

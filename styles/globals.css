@@ -40,10 +40,10 @@
     @apply px-3 pt-2 pb-3 border-2 rounded-md border-colorPrimary text-colorPrimary hover:bg-colorPrimary/20 dark:border-colorGreen dark:text-colorGreen dark:hover:bg-colorGreen/30;
   }
   .input {
-    @apply w-[500px] h-[30px] px-8 py-5 my-4 bg-slate-100 rounded-md text-[#333] placeholder:text-[#666] focus:outline-none;
+    @apply w-[500px] h-[30px] px-4 py-5 my-4 bg-slate-100 rounded-md text-[#333] placeholder:text-[#666] focus:outline-none;
   }
   .textArea {
-    @apply w-[500px] h-[200px] px-8 pt-7 my-4 bg-slate-100 rounded-md text-[#333] placeholder:text-[#666] focus:outline-none;
+    @apply w-[500px] h-[200px] px-4 pt-7 my-4 bg-slate-100 rounded-md text-[#333] placeholder:text-[#666] focus:outline-none;
   }
   .BgAnimationElement {
     @apply absolute rounded-full animate-blob w-72 h-72 mix-blend-multiply filter blur-lg opacity-90;
