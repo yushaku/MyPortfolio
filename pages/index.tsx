@@ -6,7 +6,7 @@ import { showFormContact, showNavbar, themeMode } from '../atoms/storeAtom'
 import FormContact from '../components/FormContact'
 import About from '../sections/About'
 import Contact from '../sections/Contact'
-import Header from '../sections/Header'
+import Topbar from '../sections/Header'
 import Intro from '../sections/Intro'
 import LoadingPage from '../sections/LoadingPage'
 import Navbar from '../sections/Navbar'
@@ -29,12 +29,7 @@ const Home: NextPage = () => {
   }, [])
 
   return (
-    <div
-      className={`${isDarkMode && 'dark'}
-
-      relative min-h-screen scroll-smooth
-      flex flex-col items-center justify-center `}
-    >
+    <main className={`${isDarkMode && 'dark'}`}>
       <Head>
         <title>Yushaku</title>
         <link rel="icon" href="/favicon.ico" />
@@ -43,20 +38,23 @@ const Home: NextPage = () => {
       {isLoading ? (
         <LoadingPage />
       ) : (
-        <main className="bg-bgLight text-textLight dark:bg-bgDark dark:text-[#f5f5f7] relative overflow-hidden">
-          <Header data-aos="fade-down" />
-          <Intro />
-          <Social />
-          <About />
-          <Work />
-          <Project />
-          <Contact />
-          <div className="py-8 text-center text-colorGreen w-100vw">Designed & Built by Yushaku</div>
-          {isShowFormContact && <FormContact />}
-          {isShowNavbar && <Navbar />}
-        </main>
+        <section className="bg-bgLight  text-textLight dark:bg-bgDark dark:text-[#f5f5f7] relative overflow-hidden">
+          <div className="container mx-auto">
+            <Topbar data-aos="fade-down" />
+            <Intro />
+            <Social />
+            <About />
+            <Work />
+            <Project />
+            <Contact />
+
+            <div className="py-8 text-center text-colorGreen w-100vw">Designed & Built by Yushaku</div>
+            {isShowFormContact && <FormContact />}
+            {isShowNavbar && <Navbar />}
+          </div>
+        </section>
       )}
-    </div>
+    </main>
   )
 }
 

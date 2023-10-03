@@ -30,7 +30,7 @@ module.exports = {
         },
       },
       colors: {
-        bgDark: '#0a192f',
+        bgDark: '#141922',
         bgNavDark: '#0f2243',
         bgChildDark: '#1d293d',
         colorGreen: '#64ffda',
