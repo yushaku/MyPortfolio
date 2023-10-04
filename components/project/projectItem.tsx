@@ -5,8 +5,8 @@ import React from 'react'
 import Tilt from 'react-parallax-tilt'
 
 import useScrollAnimation from '@/hooks/useScrollAnimation'
-import { delayShowProject } from '@/mocks/framerMotionEffect'
-import { ProjectEntity } from '@/mocks/projectList'
+import { delayShowProject } from '@/utils/mocks/framerMotionEffect'
+import { ProjectEntity } from '@/utils/mocks/projectList'
 
 const ProjectItem = ({ project, index }: { project: ProjectEntity; index: number }) => {
   const { ref, control, motion } = useScrollAnimation()

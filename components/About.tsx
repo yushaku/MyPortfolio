@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 
 import useScrollAnimation from '@/hooks/useScrollAnimation'
-import { programmingLanguage } from '@/mocks/workList'
+import { programmingLanguage } from '@/utils/mocks/workList'
 
 function About() {
   const { ref, control, motion } = useScrollAnimation()

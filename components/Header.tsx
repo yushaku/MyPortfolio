@@ -5,9 +5,9 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import React from 'react'
 import { useRecoilState } from 'recoil'
-import { showNavbar, themeMode } from '@/atoms/storeAtom'
-import { listVariants, delayShowOf, showOut } from '@/mocks/framerMotionEffect'
-import { navbarList } from '@/mocks/navbarList'
+import { listVariants, delayShowOf, showOut } from '@/utils/mocks/framerMotionEffect'
+import { navbarList } from '@/utils/mocks/navbarList'
+import { showNavbar, themeMode } from '@/utils/storeAtom'
 
 function Topbar() {
   const [isDarkMode, setIsDarkMode] = useRecoilState(themeMode)

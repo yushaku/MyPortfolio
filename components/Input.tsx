@@ -2,7 +2,7 @@ import React from 'react'
 
 type InputType = {
   value: string
-  setOnChange: any
+  setOnChange: React.ChangeEventHandler<HTMLInputElement>
   type: string
   name: string
   id?: string

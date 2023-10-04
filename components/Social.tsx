@@ -5,7 +5,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import React from 'react'
-import { socialVariant } from '@/mocks/framerMotionEffect'
+import { socialVariant } from '@/utils/mocks/framerMotionEffect'
 
 function Social() {
   return (

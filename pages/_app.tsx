@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app'
 import React from 'react'
-import '../styles/globals.css'
+import './globals.css'
 import { ParallaxProvider } from 'react-scroll-parallax'
 import { RecoilRoot } from 'recoil'
 

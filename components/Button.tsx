@@ -3,7 +3,7 @@ import React from 'react'
 
 type props = {
   title: string
-  setOnClick: any
+  setOnClick: React.MouseEventHandler<HTMLButtonElement>
 }
 
 function Button({ title, setOnClick }: props) {

@@ -4,10 +4,10 @@ import { motion } from 'framer-motion'
 import React from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { useRecoilState } from 'recoil'
-import { showFormContact } from '@/atoms/storeAtom'
-import { envEmailjs } from '@/constants/emailjs'
 import useToastMessage from '@/hooks/useToastMessage'
-import { showOut } from '@/mocks/framerMotionEffect'
+import { envEmailjs } from '@/utils/emailjs'
+import { showOut } from '@/utils/mocks/framerMotionEffect'
+import { showFormContact } from '@/utils/storeAtom'
 
 type FormEmail = {
   name: string
