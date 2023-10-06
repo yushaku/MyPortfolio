@@ -21,7 +21,7 @@ function Topbar() {
           animate="visible"
           variants={showOut}
           href="#"
-          className="text-[24px] font-semibold dark:text-colorGreen  text-colorPrimary flex items-center justify-center"
+          className="text-[24px] font-semibold dark:text-colorGreen text-colorPrimary flex items-center justify-center"
         >
           <Image
             src="/logo.png"
@@ -31,7 +31,7 @@ function Topbar() {
             className="object-contain mt-2 cursor-pointer"
             loading="lazy"
           />
-          <span className="pl-3 ">Yushaku</span>
+          <span className="pl-3 green_text_gradient">Yushaku</span>
         </motion.a>
       </div>
 

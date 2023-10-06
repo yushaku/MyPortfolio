@@ -31,7 +31,7 @@ function Work() {
       animate={control}
       variants={scrollVariant}
       id="Work_Section"
-      className="container mx-auto min-h-[50vh] flex items-center px-8"
+      className="flex items-center"
     >
       <div>
         <div className="flex items-center gap-2">
@@ -63,7 +63,7 @@ function Work() {
               return (
                 <div key={item.id} className={`text-lg py-2 px-4 ${showWork != item.title && 'hidden'}`}>
                   <h1 className="text-xl">
-                    {item.position}{' '}
+                    {item.position}
                     <span className="font-semibold dark:text-colorGreen text-colorPrimary">@{item.title}</span>
                   </h1>
                   <p className="text-sm dark:text-textGrayDark text-textLight">{item.date}</p>

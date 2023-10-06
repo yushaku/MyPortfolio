@@ -1,4 +1,3 @@
-import { Work } from '@mui/icons-material'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import React, { useEffect, useState } from 'react'
@@ -13,6 +12,7 @@ import LoadingPage from '@/components/LoadingPage'
 import Navbar from '@/components/Navbar'
 import Project from '@/components/Project'
 import Social from '@/components/Social'
+import Work from '@/components/Work'
 
 const Home: NextPage = () => {
   const isDarkMode = useRecoilValue(themeMode)
@@ -39,19 +39,19 @@ const Home: NextPage = () => {
         <LoadingPage />
       ) : (
         <section className="bg-bgLight  text-textLight dark:bg-bgDark dark:text-[#f5f5f7] relative overflow-hidden">
-          <div className="container mx-auto">
+          <div className="max-w-[1240px] grid gap-40 mx-auto p-6 lg:p-0">
             <Topbar data-aos="fade-down" />
             <Intro />
-            <Social />
             <About />
             <Work />
             <Project />
             <Contact />
 
-            <div className="py-8 text-center text-colorGreen w-100vw">Designed & Built by Yushaku</div>
             {isShowFormContact && <FormContact />}
             {isShowNavbar && <Navbar />}
+            <Social />
           </div>
+          <div className="py-8 text-center text-colorGreen">Designed & Built by Yushaku</div>
         </section>
       )}
     </main>

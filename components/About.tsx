@@ -29,7 +29,7 @@ function About() {
       animate={control}
       variants={scrollVariant}
       id="About_Section"
-      className="container mx-auto mt-7 min-h-[60vh] flex items-center p-8"
+      className="mt-7 flex items-center"
     >
       <div>
         <div className="flex items-center gap-3 mb-[40px] ">
@@ -46,7 +46,7 @@ function About() {
           <div className="right h-[400px] cursor-pointer ">
             <div className="flex justify-center group items transition-all duration-500">
               <Image
-                src="/developer.png"
+                src="/dev.png"
                 alt="le van son"
                 className="mt-2 rounded-full"
                 width={500}
@@ -66,9 +66,7 @@ function About() {
             <p>
               Since then, I have gained experience working at both startups and corporations. Currently, I work at
               Upstatement where my focus is on building accessible and inclusive digital products and experiences for a
-              diverse range of clients. I am committed to staying up-to-date with the latest web development trends and
-              technologies, and I enjoy collaborating with my colleagues to create innovative solutions that meet the
-              needs of our clients and their users.
+              diverse range of clients.
             </p>
 
             <p>
@@ -77,7 +75,7 @@ function About() {
             </p>
             <p>Here are a few technologies I have been working with recently:</p>
 
-            <ul className="flex flex-wrap items-center gap-8">
+            <ul className="flex flex-wrap items-center gap-4">
               {programmingLanguage.map(({ iconLink: Icon, title }, id) => (
                 <li key={id} className="flex gap-1 items-center justify-center text-[19px]">
                   <span className="w-6 h-6">

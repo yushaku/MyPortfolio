@@ -8,9 +8,8 @@
     flex items-center justify-between
     bg-[#f6f6f6]
     dark:bg-bgDark
-    top-0 left-0 z-50  
-    h-[10vh] w-full
-    px-4 sm:px-[40px] md:px-[75px];
+    top-0 z-50  right-1/2 translate-x-1/2
+    h-[10vh] w-full max-w-[1300px];
   }
   footer {
     @apply fixed bottom-0;
@@ -40,12 +39,24 @@
     @apply px-3 pt-2 pb-3 border-2 rounded-md border-colorPrimary text-colorPrimary hover:bg-colorPrimary/20 dark:border-colorGreen dark:text-colorGreen dark:hover:bg-colorGreen/30;
   }
   .input {
-    @apply w-[500px] h-[30px] px-4 py-5 my-4 bg-slate-100 rounded-md text-[#333] placeholder:text-[#666] focus:outline-none;
+    @apply w-[500px] h-[30px] px-4 py-5 my-3 bg-slate-100 rounded-lg text-[#333] placeholder:text-[#666] focus:outline-none;
   }
   .textArea {
-    @apply w-[500px] h-[200px] px-4 pt-7 my-4 bg-slate-100 rounded-md text-[#333] placeholder:text-[#666] focus:outline-none;
+    @apply w-[500px] h-[150px] px-4 pt-7 my-4 bg-slate-100 rounded-lg text-[#333] placeholder:text-[#666] focus:outline-none;
   }
   .BgAnimationElement {
     @apply absolute rounded-full animate-blob w-72 h-72 mix-blend-multiply filter blur-lg opacity-90;
   }
+}
+
+.green_text_gradient {
+  background: #64ffda; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #64ffda, #38ef7d); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #64ffda,
+    #38ef7d
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

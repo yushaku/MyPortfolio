@@ -15,11 +15,9 @@ const ProjectItem = ({ project, index }: { project: ProjectEntity; index: number
     <motion.div ref={ref} initial="hidden" animate={control} custom={index} variants={delayShowProject}>
       <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} glareEnable glareMaxOpacity={0.2} scale={1.01} perspective={1000}>
         <div
-          className={`relative flex shadow-xl ${
-            project.id % 2 === 0 ? 'justify-end' : 'justify-start'
-          } lg:w-[80%] mx-auto py-4`}
+          className={`relative flex shadow-xl ${project.id % 2 === 0 ? 'justify-end' : 'justify-start'} mx-auto py-4`}
         >
-          <div className="image md:w-[60%] lg:w-[70%] xl:w-[60%]">
+          <div className="image w-[60%] mx-4">
             <Image src={project.imageLink} alt={project.title} width={1500} height={800} loading="lazy" />
           </div>
 
@@ -31,15 +29,14 @@ const ProjectItem = ({ project, index }: { project: ProjectEntity; index: number
                     : 'md:right-0 md:left-[200px] md:items-end justify-end '
                 }
                 bg-[#0a192f]/70 md:bg-[#0a192f]/0 md:px-10  
-                flex justify-center flex-col `}
+                flex justify-center flex-col`}
           >
             <h6 className="text-colorPrimary dark:text-colorGreen">Featured Project</h6>
             <h3 className="text-2xl font-semibold">{project.title}</h3>
             <p
-              className={`py-4 ${project.id % 2 == 0 ? 'pr-4' : 'pl-4'} 
-                    text-[#a8b2d1]
-                    md:py-8 md:rounded-lg md:bg-[#0a192f]/80
-                    `}
+              className={`py-4 ${
+                project.id % 2 == 0 ? 'pr-4' : 'pl-4'
+              } text-[#a8b2d1] md:py-8 md:rounded-lg md:bg-[#0a192f]/80 `}
             >
               {project.description}
             </p>

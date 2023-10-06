@@ -47,14 +47,14 @@ function FormContact() {
           initial="hidden"
           animate="visible"
           variants={showOut}
-          className="relative flex flex-col items-center justify-center bg-[#0f2243]/80 rounded-xl w-[650px] py-12 z-50"
+          className="relative flex flex-col items-center justify-center bg-bgDark/70 rounded-xl w-[650px] py-12 z-50"
         >
           <CloseIcon
-            className="absolute top-[3%] right-[5%] cursor-pointer"
+            className="absolute top-[5%] right-[5%] cursor-pointer"
             fontSize="large"
             onClick={() => setIsShowFormContact(!isShowFormContact)}
           />
-          <h1 className="text-5xl font-semibold pb-9 text-colorGreen">Get in touch</h1>
+          <h1 className="text-3xl font-semibold pb-9 text-colorGreen">Get in touch</h1>
 
           <label htmlFor="email">
             <input
@@ -99,7 +99,7 @@ function FormContact() {
             <p className="text-red-400">{errors.message?.message}</p>
           </label>
 
-          <input type="submit" className="button px-[36px] mt-10" value="send" />
+          <input type="submit" className="button px-[36px] mt-4" value="send" />
         </motion.form>
         <ToastMessage />
       </div>

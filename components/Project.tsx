@@ -19,7 +19,7 @@ function Project() {
         <p className="h-[2px] w-[250px] bg-gray-600 translate-y-1"></p>
       </div>
 
-      <div className="CONTENT flex gap-[80px] flex-col md:gap-[100px]">
+      <div className="flex gap-[80px] flex-col md:gap-[100px]">
         {projectList.map((project, index) => {
           return <ProjectItem key={index} project={project} index={index} />
         })}

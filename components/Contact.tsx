@@ -21,7 +21,7 @@ function Contact() {
       animate={control}
       variants={scrollVariant}
       id="Contact_Section"
-      className="h-full md:h-[70vh] px-[25px] sm:px-[50px] md:px-[100px] lg:px-[250px] mt-[20vh] relative flex justify-center items-center flex-col md:flex-row"
+      className="h-full md:h-[70vh] relative flex justify-center items-center flex-col md:flex-row"
     >
       <div className="flex flex-col items-center justify-center h-[70%]">
         <h3 className="text-3xl pb-9">
