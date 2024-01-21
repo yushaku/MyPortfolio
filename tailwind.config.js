@@ -30,11 +30,11 @@ module.exports = {
         },
       },
       colors: {
-        bgDark: '#141922',
+        bgDark: '#040115',
         bgNavDark: '#0f2243',
         bgChildDark: '#1d293d',
         colorGreen: '#64ffda',
-        textDark: '#ccd6f6',
+        textDark: '#ccd6ff',
         textGrayDark: '#8992b0',
 
         bgLight: '#fafafa',

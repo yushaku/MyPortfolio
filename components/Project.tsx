@@ -10,7 +10,7 @@ function Project() {
     <motion.div
       variants={projectVariant}
       id="Experience_Section"
-      className="container mx-auto flex flex-col items-start justify-center p-8"
+      className="mx-auto flex flex-col items-start justify-center p-8"
     >
       <div className="TITLE flex items-center gap-3 mb-[40px]">
         <h3 className="text-3xl">
@@ -19,7 +19,7 @@ function Project() {
         <p className="h-[2px] w-[250px] bg-gray-600 translate-y-1"></p>
       </div>
 
-      <div className="flex gap-[80px] flex-col md:gap-[100px]">
+      <div className="flex gap-[80px] flex-col md:gap-[100px] z-[100]">
         {projectList.map((project, index) => {
           return <ProjectItem key={index} project={project} index={index} />
         })}

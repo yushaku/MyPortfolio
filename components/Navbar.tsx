@@ -4,7 +4,7 @@ import React from 'react'
 import { useRecoilState } from 'recoil'
 import { delayShowOf } from '@/utils/mocks/framerMotionEffect'
 import { navbarList } from '@/utils/mocks/navbarList'
-import { showNavbar, themeMode } from '@/utils/storeAtom'
+import { themeMode } from '@/utils/storeAtom'
 
 const variantBtn = {
   hidden: {
@@ -21,18 +21,17 @@ const variantBtn = {
   },
 }
 
-function Navbar() {
-  const [isShowNavbar, setIsShowNavbar] = useRecoilState(showNavbar)
+function Navbar({ onToggle, isShow }: { onToggle: () => void; isShow: boolean }) {
   const [isDarkMode, setIsDarkMode] = useRecoilState(themeMode)
 
   return (
-    <div className="fixed top-0 right-0 z-50 flex justify-end min-w-full backdrop-blur-sm">
-      <div className="absolute top-4 left-3 dark:text-colorGreen text-[24px] font-semibold">
-        <h1>Yushaku</h1>
-      </div>
-
-      <div onClick={() => setIsShowNavbar(!isShowNavbar)} className="absolute top-3 right-3 dark:text-colorGreen ">
-        <CloseIcon className="text-4xl" />
+    <div
+      className={`fixed transition-all duration-300 top-0 ${
+        isShow ? 'right-0' : '-right-[150%]'
+      } z-50 flex justify-end min-w-full backdrop-blur-sm`}
+    >
+      <div onClick={() => onToggle()} className="absolute top-12 right-3 dark:text-colorGreen ">
+        <CloseIcon className="text-7xl" />
       </div>
 
       <motion.nav className="navbar">

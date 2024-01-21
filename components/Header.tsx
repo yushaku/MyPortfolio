@@ -3,18 +3,19 @@ import DensityMediumIcon from '@mui/icons-material/DensityMedium'
 import LightModeIcon from '@mui/icons-material/LightMode'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import { useRecoilState } from 'recoil'
+import Navbar from './Navbar'
 import { listVariants, delayShowOf, showOut } from '@/utils/mocks/framerMotionEffect'
 import { navbarList } from '@/utils/mocks/navbarList'
-import { showNavbar, themeMode } from '@/utils/storeAtom'
+import { themeMode } from '@/utils/storeAtom'
 
 function Topbar() {
   const [isDarkMode, setIsDarkMode] = useRecoilState(themeMode)
-  const [isShowNavbar, setIsShowNavbar] = useRecoilState(showNavbar)
+  const [isShow, setIsShow] = useState(false)
 
   return (
-    <header>
+    <header className="container px-4 md:px-0">
       <div>
         <motion.a
           initial="hidden"
@@ -69,10 +70,12 @@ function Topbar() {
         animate="visible"
         variants={showOut}
         className="sm:hidden z-100"
-        onClick={() => setIsShowNavbar(!isShowNavbar)}
+        onClick={() => setIsShow(!isShow)}
       >
-        <DensityMediumIcon className="text-3xl dark:text-colorGreen text-colorPrimary" />
+        <DensityMediumIcon className="text-4xl dark:text-colorGreen text-colorPrimary" />
       </motion.div>
+
+      <Navbar isShow={isShow} onToggle={() => setIsShow(!isShow)} />
     </header>
   )
 }

@@ -1,4 +1,5 @@
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord'
+import Image from 'next/image'
 import React, { useState } from 'react'
 
 import useScrollAnimation from '@/hooks/useScrollAnimation'
@@ -42,23 +43,36 @@ function Work() {
         </div>
 
         <div className="flex flex-col sm:flex-row pt-[52px]">
-          <div className="title ">
-            <ul className="flex flex-row gap-4 cursor-pointer sm:flex-col">
-              {workedList.map((item) => {
-                return (
-                  <li
-                    key={item.id}
-                    className={`text-lg py-1 px-4 text-white ${showWork === item.title && 'bg-[#153b5f]'}`}
-                    onClick={() => setShowWork(item.title)}
-                  >
-                    <span>{item.title}</span>
-                  </li>
-                )
-              })}
-            </ul>
+          <div className="right h-[400px] cursor-pointer w-2/5">
+            <div className="flex justify-center group items transition-all duration-500">
+              <Image
+                src="/dev.png"
+                alt="le van son"
+                className="mt-2 rounded-full"
+                width={500}
+                height={500}
+                loading="lazy"
+              />
+            </div>
           </div>
 
-          <div className="description">
+          {/* <div className="title "> */}
+          {/*   <ul className="flex flex-row gap-4 cursor-pointer sm:flex-col"> */}
+          {/*     {workedList.map((item) => { */}
+          {/*       return ( */}
+          {/*         <li */}
+          {/*           key={item.id} */}
+          {/*           className={`text-lg py-1 px-4 text-white ${showWork === item.title && 'bg-[#153b5f]'}`} */}
+          {/*           onClick={() => setShowWork(item.title)} */}
+          {/*         > */}
+          {/*           <span>{item.title}</span> */}
+          {/*         </li> */}
+          {/*       ) */}
+          {/*     })} */}
+          {/*   </ul> */}
+          {/* </div> */}
+
+          <div className="description w-3/5">
             {workedList.map((item) => {
               return (
                 <div key={item.id} className={`text-lg py-2 px-4 ${showWork != item.title && 'hidden'}`}>
@@ -66,7 +80,7 @@ function Work() {
                     {item.position}
                     <span className="font-semibold dark:text-colorGreen text-colorPrimary">@{item.title}</span>
                   </h1>
-                  <p className="text-sm dark:text-textGrayDark text-textLight">{item.date}</p>
+                  <p className="text-sm dark:text-textDark text-textLight">{item.date}</p>
                   <ul className="mt-3">
                     {item.describe.map((descItem, index) => {
                       return (
