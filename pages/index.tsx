@@ -3,7 +3,7 @@ import Head from 'next/head'
 import React, { useEffect, useState } from 'react'
 import { useRecoilValue } from 'recoil'
 import FormContact from '../components/FormContact'
-import { showFormContact, themeMode } from '../utils/storeAtom'
+import { showFormContact } from '../utils/storeAtom'
 import About from '@/components/About'
 import Contact from '@/components/Contact'
 import Encryption from '@/components/Encryption'
@@ -16,7 +16,6 @@ import Social from '@/components/Social'
 import Work from '@/components/Work'
 
 const Home: NextPage = () => {
-  const isDarkMode = useRecoilValue(themeMode)
   const isShowFormContact = useRecoilValue(showFormContact)
   const [isLoading, setIsLoading] = useState(true)
 
@@ -29,7 +28,7 @@ const Home: NextPage = () => {
   }, [])
 
   return (
-    <main className={`${isDarkMode && 'dark'}`}>
+    <main className="dark">
       <Head>
         <title>Yushaku</title>
         <link rel="icon" href="/favicon.ico" />
@@ -40,7 +39,7 @@ const Home: NextPage = () => {
       ) : (
         <section className="bg-bgLight text-textLight dark:bg-bgDark dark:text-[#f5f5f7] relative overflow-hidden">
           <StarsCanvas />
-          <div className="container mx-auto p-6 lg:p-0">
+          <div className="max-w-6xl mx-auto px-14 py-6 lg:p-0">
             <Topbar data-aos="fade-down" />
             <Intro />
             <About />

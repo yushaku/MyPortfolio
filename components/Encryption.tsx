@@ -16,8 +16,8 @@ const slideInFromTop = {
 
 const Encryption = () => {
   return (
-    <div className="flex flex-row relative items-center justify-center min-h-[80dvh]">
-      <div className="absolute w-auto h-auto top-40 z-[5]">
+    <div className="flex flex-row relative items-center justify-center min-h-[80dvh] md:my-40">
+      <div className="absolute w-auto h-auto top-16 z-[5]">
         <motion.div variants={slideInFromTop} className="text-[40px] font-medium text-center text-gray-200">
           <span className="green_text_gradient">Performance & Security</span>
         </motion.div>

@@ -42,19 +42,15 @@ function Work() {
           <p className="h-[2px] w-[250px] bg-gray-600 translate-y-1"></p>
         </div>
 
-        <div className="flex flex-col sm:flex-row pt-[52px]">
-          <div className="right h-[400px] cursor-pointer w-2/5">
-            <div className="flex justify-center group items transition-all duration-500">
-              <Image
-                src="/dev.png"
-                alt="le van son"
-                className="mt-2 rounded-full"
-                width={500}
-                height={500}
-                loading="lazy"
-              />
-            </div>
-          </div>
+        <div className="flex flex-col md:flex-row pt-[52px]">
+          <Image
+            src="/dev.png"
+            alt="le van son"
+            className="mt-2 rounded-full"
+            width={500}
+            height={500}
+            loading="lazy"
+          />
 
           {/* <div className="title "> */}
           {/*   <ul className="flex flex-row gap-4 cursor-pointer sm:flex-col"> */}
@@ -72,7 +68,7 @@ function Work() {
           {/*   </ul> */}
           {/* </div> */}
 
-          <div className="description w-3/5">
+          <div className="description w-full md:w-3/5">
             {workedList.map((item) => {
               return (
                 <div key={item.id} className={`text-lg py-2 px-4 ${showWork != item.title && 'hidden'}`}>

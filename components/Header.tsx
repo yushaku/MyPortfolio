@@ -15,7 +15,7 @@ function Topbar() {
   const [isShow, setIsShow] = useState(false)
 
   return (
-    <header className="container px-4 md:px-0">
+    <header className="max-w-6xl mx-auto px-4 md:px-0">
       <div>
         <motion.a
           initial="hidden"

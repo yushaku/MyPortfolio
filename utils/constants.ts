@@ -92,20 +92,20 @@ export const Frontend_skill = [
   {
     skill_name: 'Html 5',
     Image: '/html.png',
-    width: 80,
-    height: 80,
+    width: 90,
+    height: 90,
   },
   {
     skill_name: 'Css',
     Image: '/css.png',
-    width: 80,
-    height: 80,
+    width: 90,
+    height: 90,
   },
   {
     skill_name: 'Java Script',
     Image: '/js.png',
-    width: 65,
-    height: 65,
+    width: 80,
+    height: 80,
   },
   {
     skill_name: 'Type Script',
@@ -186,8 +186,8 @@ export const Full_stack = [
     height: 80,
   },
   {
-    skill_name: 'My SQL',
-    Image: '/mysql.png',
+    skill_name: 'web3js',
+    Image: '/web3js.png',
     width: 80,
     height: 80,
   },
@@ -206,7 +206,7 @@ export const Full_stack = [
 
   {
     skill_name: 'Figma',
-    Image: '/figma.png',
+    Image: '/figma.svg',
     width: 80,
     height: 80,
   },
@@ -214,14 +214,14 @@ export const Full_stack = [
 
 export const Other_skill = [
   {
-    skill_name: 'solidity',
-    Image: '/solidity.png',
+    skill_name: 'github',
+    Image: '/github.svg',
     width: 80,
     height: 80,
   },
   {
-    skill_name: 'web3js',
-    Image: '/web3js.png',
+    skill_name: 'solidity',
+    Image: '/solidity.png',
     width: 80,
     height: 80,
   },

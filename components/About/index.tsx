@@ -29,13 +29,9 @@ function About() {
       animate={control}
       variants={scrollVariant}
       id="About_Section"
-      className="my-40 flex items-center"
+      className="my-10 md:my-48 flex items-center"
     >
-      <section
-        id="skills"
-        className="flex flex-col gap-3 h-full relative overflow-hidden pb-80 py-20"
-        style={{ transform: 'scale(0.9' }}
-      >
+      <section id="skills" className="flex flex-col gap-3 relative overflow-hidden" style={{ transform: 'scale(0.9' }}>
         <div className="flex items-center gap-3 mb-[40px] ">
           <h3 className="text-3xl">
             <span className="text-colorPrimary dark:text-colorGreen">0.1</span> About me
@@ -74,8 +70,8 @@ function About() {
             {/*   ))} */}
             {/* </ul> */}
 
-            <article className="flex items-center justify-center flex-col gap-3">
-              <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+            <article className="flex items-center justify-center flex-wrap flex-row md:flex-col md:gap-3">
+              <div className="flex flex-row justify-around flex-wrap mt-4 items-center">
                 {Frontend_skill.map((image, index) => (
                   <SkillDataProvider
                     key={index}
@@ -86,7 +82,7 @@ function About() {
                   />
                 ))}
               </div>
-              <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+              <div className="flex flex-row justify-around flex-wrap mt-4 items-center">
                 {Backend_skill.map((image, index) => (
                   <SkillDataProvider
                     key={index}
@@ -97,7 +93,7 @@ function About() {
                   />
                 ))}
               </div>
-              <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+              <div className="flex flex-row justify-around flex-wrap mt-4 items-center">
                 {Full_stack.map((image, index) => (
                   <SkillDataProvider
                     key={index}
